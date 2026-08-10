@@ -1,7 +1,7 @@
 const projects = [
   {
-    slug: "portfolio",
-    title: "Portfolio",
+    slug: "LilleRo",
+    title: "LilleRo",
     year: "2026",
     summary: "En personlig portfolio bygget med React, Vite og GitHub Pages.",
     description:
@@ -23,7 +23,8 @@ const projects = [
     slug: "case-study",
     title: "Case study",
     year: "2026",
-    summary: "Et projektkort, som du kan kopiere og ændre til dit eget projekt.",
+    summary:
+      "Et projektkort, som du kan kopiere og ændre til dit eget projekt.",
     description:
       "Beskriv problemet, processen, din rolle, de vigtigste valg og hvad du lærte. Gør projektet konkret, så andre kan forstå dit arbejde.",
     tags: ["Design", "Frontend", "Proces"],

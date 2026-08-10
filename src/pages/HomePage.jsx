@@ -8,7 +8,7 @@ function HomePage() {
     <div className="page">
       <section className="hero-section">
         <p className="eyebrow">Portfolio</p>
-        <h1>LINE SVENDSEN</h1>
+        <img className="hero-logo" src="/Line Svendsen.svg" alt="Line Svendsen" />
         <p className="hero-text">
           Jeg arbejder med frontend, design og digitale produkter. Her samler
           jeg projekter, proces og det, jeg lærer undervejs.
