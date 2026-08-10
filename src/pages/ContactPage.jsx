@@ -9,15 +9,23 @@ function ContactPage() {
 
       <ul className="contact-list">
         <li>
-          <a href="mailto:dinmail@example.com">dinmail@example.com</a>
+          <a href="mailto:lines1310@gmail.com">Email</a>
         </li>
         <li>
-          <a href="https://github.com/username" rel="noreferrer" target="_blank">
+          <a
+            href="https://github.com/Line-jpg"
+            rel="noreferrer"
+            target="_blank"
+          >
             GitHub
           </a>
         </li>
         <li>
-          <a href="https://www.linkedin.com" rel="noreferrer" target="_blank">
+          <a
+            href="https://www.linkedin.com/in/line-svendsen-112911427"
+            rel="noreferrer"
+            target="_blank"
+          >
             LinkedIn
           </a>
         </li>
