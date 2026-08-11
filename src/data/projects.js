@@ -20,7 +20,7 @@ const projects = [
     ],
   },
   {
-    slug: "Surrealistisk-collage",
+    slug: "surrealistisk collage",
     title: "Surrealistisk Collage",
     year: "2026",
     summary:
@@ -32,15 +32,15 @@ const projects = [
     links: [],
   },
   {
-    slug: "case-study",
-    title: "Case study",
-    year: "2026",
+    slug: "akvarie",
+    title: "Stor center NORD - Akvarie",
+    year: "2025",
     summary:
-      "Et projektkort, som du kan kopiere og ændre til dit eget projekt.",
+      "Hvordan kan vi gøre akvariet til et bedre sted for børn og familier?",
     description:
       "Beskriv problemet, processen, din rolle, de vigtigste valg og hvad du lærte. Gør projektet konkret, så andre kan forstå dit arbejde.",
     tags: ["Design", "Frontend", "Proces"],
-    image: `${import.meta.env.BASE_URL}portfolio-placeholder.svg`,
+    image: `${import.meta.env.BASE_URL}akvarie-billede.png`,
     links: [
       {
         label: "Eksempel-link",
@@ -49,8 +49,8 @@ const projects = [
     ],
   },
   {
-    slug: "case-study",
-    title: "Case study",
+    slug: "webshop",
+    title: "Webshop",
     year: "2026",
     summary:
       "Et projektkort, som du kan kopiere og ændre til dit eget projekt.",
