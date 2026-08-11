@@ -20,7 +20,7 @@ const projects = [
     ],
   },
   {
-    slug: "surrealistisk collage",
+    slug: "surrealistisk-collage",
     title: "Surrealistisk Collage",
     year: "2026",
     summary:
