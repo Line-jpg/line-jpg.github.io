@@ -7,7 +7,7 @@ const projects = [
     description:
       "Portfolioen viser udvalgte projekter og fungerer som et udgangspunkt for at arbejde med komponenter, routing, styling og deployment.",
     tags: ["React", "Vite", "GitHub Pages"],
-    image: `${import.meta.env.BASE_URL}portfolio-placeholder.svg`,
+    image: `${import.meta.env.BASE_URL}LilleRoFront.png`,
     links: [
       {
         label: "Live site",
