@@ -26,7 +26,7 @@ const projects = [
     summary:
       "Et projektkort, som du kan kopiere og ændre til dit eget projekt.",
     description:
-      "Beskriv problemet, processen, din rolle, de vigtigste valg og hvad du lærte. Gør projektet konkret, så andre kan forstå dit arbejde.",
+      "Opgave beskrivelse: En surrealistisk collage er et billede sammensat af udklip eller elementer, der normalt ikke hører sammen, så de tilsammen skaber en drømmeagtig, overraskende eller ulogisk virkelighed. Det handler om at kombinere det velkendte på en uventet måde for at vække fantasi og følelser. Collagen skal overraske og vække undren samtidig med, at man gerne må få et lille smil på læben. Sammensæt din surrealistiske collage i Photoshop ved at bruge funktioner som fritlægning, masker, justeringslag, udtoning og meget mere.",
     tags: ["AdobePhotoshop", "Visuel hieraki", "Storytelling"],
     image: `${import.meta.env.BASE_URL}Surrealistisk-collage.png`,
     links: [],
