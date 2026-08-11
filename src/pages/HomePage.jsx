@@ -35,15 +35,23 @@ function HomePage() {
 
         <div className="project-grid">
           {featuredProjects.map((project) => (
-            <article className="project-card" key={project.slug}>
+            <Link
+              className="project-card"
+              to={`/projects/${project.slug}`}
+              key={project.slug}
+            >
               <img src={project.image} alt={`Preview af ${project.title}`} />
               <div className="project-card-content">
                 <p className="eyebrow">{project.year}</p>
-                <h3>{project.title}</h3>
+                <h2>{project.title}</h2>
                 <p>{project.summary}</p>
-                <Link to={`/projects/${project.slug}`}>Læs mere</Link>
+                <ul className="tag-list">
+                  {project.tags.map((tag) => (
+                    <li key={tag}>{tag}</li>
+                  ))}
+                </ul>
               </div>
-            </article>
+            </Link>
           ))}
         </div>
       </section>
