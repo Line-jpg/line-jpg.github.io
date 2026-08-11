@@ -3,7 +3,9 @@ import { NavLink } from "react-router";
 function Navbar() {
   return (
     <header className="site-header">
-      <img className="brand" src="favicon.svg" alt="Line Svendsen" />
+      <NavLink to="/" className="brand" end>
+        <img className="brand" src="iconWhite.png" alt="Line Svendsen" />
+      </NavLink>
 
       <nav className="site-nav" aria-label="Primær navigation">
         <NavLink to="/" end>
