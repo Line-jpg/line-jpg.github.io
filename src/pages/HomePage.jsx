@@ -8,7 +8,11 @@ function HomePage() {
     <div className="page">
       <section className="hero-section">
         <p className="eyebrow">Portfolio</p>
-        <img className="hero-logo" src="/Line Svendsen.svg" alt="Line Svendsen" />
+        <img
+          className="hero-logo"
+          src="/Line Svendsen.svg"
+          alt="Line Svendsen"
+        />
         <p className="hero-text">
           Jeg arbejder med frontend, design og digitale produkter. Her samler
           jeg projekter, proces og det, jeg lærer undervejs.
@@ -26,7 +30,7 @@ function HomePage() {
       <section className="section">
         <div className="section-heading">
           <p className="eyebrow">Udvalgte projekter</p>
-          <h2>Start med få projekter og gør dem stærke.</h2>
+          <h2>De nyeste.</h2>
         </div>
 
         <div className="project-grid">
