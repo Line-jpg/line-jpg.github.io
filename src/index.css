@@ -304,6 +304,73 @@ p {
   font-weight: 800;
 }
 
+.about-page {
+  display: flex;
+  align-items: center;
+  min-height: calc(100dvh - 112px);
+  padding: 1.25rem 0;
+}
+
+.about-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 3rem;
+  align-items: center;
+  width: 100%;
+}
+
+.about-page .eyebrow {
+  font-size: 0.85rem;
+  letter-spacing: 5px;
+}
+
+.about-page h1 {
+  margin-bottom: 0.6rem;
+  font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+}
+
+.about-page .lead {
+  border-top: 0;
+  margin-bottom: 0.65rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.photo-collage {
+  position: relative;
+  width: 100%;
+  max-width: 460px;
+  height: min(56vh, 520px);
+  user-select: none;
+}
+
+.photo-collage-item {
+  position: absolute;
+  max-width: none;
+  touch-action: none;
+  cursor: grab;
+  filter: drop-shadow(0 6px 16px rgba(28, 23, 23, 0.25));
+}
+
+.photo-collage-item:active {
+  cursor: grabbing;
+}
+
+@media (max-width: 900px) {
+  .about-page {
+    min-height: 0;
+  }
+
+  .about-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .photo-collage {
+    max-width: 100%;
+    height: min(50vh, 420px);
+  }
+}
+
 @media (max-width: 720px) {
   .site-header {
     align-items: flex-start;
