@@ -331,23 +331,25 @@ p {
 
 .about-page .lead {
   border-top: 0;
-  margin-bottom: 0.65rem;
+  margin-bottom: 12px;
   font-size: 0.95rem;
   line-height: 1.5;
 }
 
 .photo-collage {
   position: relative;
-  width: 100%;
-  max-width: 460px;
-  height: min(56vh, 520px);
+  width: min(56vh, 480px);
+  height: min(56vh, 480px);
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
   user-select: none;
 }
 
 .photo-collage-item {
   position: absolute;
   max-width: none;
-  touch-action: none;
+  touch-action: grab;
   cursor: grab;
   filter: drop-shadow(0 6px 16px rgba(28, 23, 23, 0.25));
 }
@@ -366,8 +368,9 @@ p {
   }
 
   .photo-collage {
-    max-width: 100%;
-    height: min(50vh, 420px);
+    width: min(50vh, 90vw, 420px);
+    height: min(50vh, 90vw, 420px);
+    margin-left: 0;
   }
 }
 
