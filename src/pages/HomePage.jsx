@@ -62,30 +62,31 @@ function HomePage() {
         </div>
       </section>
 
-      <section className="section">
-        <div className="section-heading">
-          <p className="eyebrow">Udvalgte projekter</p>
-          <h2>De nyeste.</h2>
+      <section className="project-section">
+        <div className="project-section-heading">
+          <h2>Mine projekter</h2>
         </div>
 
-        <div className="project-grid">
-          {featuredProjects.map((project) => (
+        <div className="project-list">
+          {featuredProjects.map((project, index) => (
             <Link
-              className="project-card"
+              className="project-row"
               to={`/projects/${project.slug}`}
               key={project.slug}
             >
-              <img src={project.image} alt={`Preview af ${project.title}`} />
-              <div className="project-card-content">
-                <p className="eyebrow">{project.year}</p>
-                <h2>{project.title}</h2>
-                <p>{project.summary}</p>
-                <ul className="tag-list">
-                  {project.tags.map((tag) => (
-                    <li key={tag}>{tag}</li>
-                  ))}
-                </ul>
+              <span className="project-row-number">
+                {String(index + 1).padStart(2, "0")}
+              </span>
+              <div className="project-row-body">
+                <h3>{project.title}</h3>
+                <p>{project.description}</p>
+                <p className="project-row-tags">{project.tags.join(" - ")}</p>
               </div>
+              <img
+                className="project-row-image"
+                src={project.image}
+                alt={`Preview af ${project.title}`}
+              />
             </Link>
           ))}
         </div>

@@ -1,5 +1,5 @@
-import { Link } from "react-router";
 import projects from "../data/projects";
+import ProjectCard from "../components/ProjectCard";
 
 function ProjectsPage() {
   return (
@@ -15,23 +15,7 @@ function ProjectsPage() {
 
       <section className="project-grid" aria-label="Projektliste">
         {projects.map((project) => (
-          <Link
-            className="project-card"
-            to={`/projects/${project.slug}`}
-            key={project.slug}
-          >
-            <img src={project.image} alt={`Preview af ${project.title}`} />
-            <div className="project-card-content">
-              <p className="eyebrow">{project.year}</p>
-              <h2>{project.title}</h2>
-              <p>{project.summary}</p>
-              <ul className="tag-list">
-                {project.tags.map((tag) => (
-                  <li key={tag}>{tag}</li>
-                ))}
-              </ul>
-            </div>
-          </Link>
+          <ProjectCard project={project} key={project.slug} />
         ))}
       </section>
     </div>
