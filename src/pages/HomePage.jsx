@@ -7,23 +7,58 @@ function HomePage() {
   return (
     <div className="page">
       <section className="hero-section">
-        <p className="eyebrow">Portfolio</p>
-        <img
-          className="hero-logo"
-          src="/Line Svendsen.svg"
-          alt="Line Svendsen"
-        />
-        <p className="hero-text">
-          Jeg arbejder med frontend, design og digitale produkter. Her samler
-          jeg projekter, proces og det, jeg lærer undervejs.
-        </p>
-        <div className="actions">
-          <Link className="button" to="/projects">
-            Se projekter
-          </Link>
-          <Link className="button secondary" to="/contact">
-            Kontakt mig
-          </Link>
+        <div className="hero-content">
+          <p className="eyebrow">Portfolio</p>
+          <img
+            className="hero-logo"
+            src="/Line Svendsen.svg"
+            alt="Line Svendsen"
+          />
+          <p className="hero-text">
+            Jeg arbejder med frontend, design og digitale produkter. Her
+            samler jeg projekter, proces og det, jeg lærer undervejs.
+          </p>
+          <div className="actions">
+            <Link className="button" to="/projects">
+              Se projekter
+            </Link>
+            <Link className="button secondary" to="/contact">
+              Kontakt mig
+            </Link>
+          </div>
+        </div>
+
+        <div className="hero-collage">
+          <img
+            className="hero-collage-item hero-collage-blaa"
+            src="/blaaBlomst.svg"
+            alt=""
+            draggable={false}
+          />
+          <img
+            className="hero-collage-item hero-collage-pink"
+            src="/pinkBlomst.svg"
+            alt=""
+            draggable={false}
+          />
+          <img
+            className="hero-collage-item hero-collage-placeholder"
+            src="/placeHolder.svg"
+            alt="Portfolio billede"
+            draggable={false}
+          />
+          <img
+            className="hero-collage-item hero-collage-hvid"
+            src="/hvidBlomst.svg"
+            alt=""
+            draggable={false}
+          />
+          <img
+            className="hero-collage-item hero-collage-klister"
+            src="/klisterMissen.svg"
+            alt=""
+            draggable={false}
+          />
         </div>
       </section>
 

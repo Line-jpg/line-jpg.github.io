@@ -7,7 +7,7 @@
     BlinkMacSystemFont,
     "Segoe UI",
     sans-serif;
-  color: #1d2430;
+  color: rgb(68, 27, 7);
   background: #f7f4ef;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -100,10 +100,69 @@ textarea {
 
 .hero-section {
   display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2.4fr);
+  gap: 2rem;
+  align-items: center;
+  min-height: 58svh;
+  padding: 1rem 0;
+}
+
+.hero-content {
+  display: grid;
   gap: 1.5rem;
   align-content: center;
-  min-height: 58svh;
-  padding: 3rem 0;
+}
+
+.hero-collage {
+  position: relative;
+  justify-self: end;
+  width: min(100%, 720px);
+  aspect-ratio: 1;
+  margin: 0 auto;
+  margin-left: 172px;
+  user-select: none;
+}
+
+.hero-collage-item {
+  position: absolute;
+  max-width: none;
+  width: 46%;
+}
+
+.hero-collage-placeholder {
+  top: 24%;
+  left: 28%;
+  z-index: 2;
+  width: 42%;
+  border-radius: 0.375rem;
+}
+
+.hero-collage-blaa {
+  top: 10%;
+  left: 9%;
+  z-index: 1;
+  width: 41%;
+}
+
+.hero-collage-pink {
+  top: 47%;
+  left: 55%;
+  z-index: 1;
+  width: 33%;
+}
+
+.hero-collage-hvid {
+  top: 13%;
+  left: 55%;
+  z-index: 3;
+  width: 32%;
+}
+
+.hero-collage-klister {
+  top: 68%;
+  left: 16%;
+  z-index: 3;
+  width: 34%;
 }
 
 .section {
@@ -375,6 +434,16 @@ p {
     height: min(50vh, 90vw, 420px);
     margin-left: 0;
   }
+
+  .hero-section {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-collage {
+    justify-self: center;
+    width: min(100%, 540px);
+    margin-left: 0;
+  }
 }
 
 @media (max-width: 720px) {
@@ -393,7 +462,7 @@ p {
 
   .hero-section {
     min-height: auto;
-    padding-top: 2rem;
+    padding: 1rem 0;
   }
 
   .project-card {
