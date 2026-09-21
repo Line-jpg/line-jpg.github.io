@@ -2,7 +2,7 @@ import { Link } from "react-router";
 import projects from "../data/projects";
 
 function HomePage() {
-  const featuredProjects = projects.slice(0, 2);
+  const featuredProjects = projects.slice(0, 3);
 
   return (
     <div className="page">
