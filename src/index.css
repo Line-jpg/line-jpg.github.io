@@ -487,6 +487,126 @@ p {
   cursor: grabbing;
 }
 
+.tools-section {
+  padding: 0 0 3rem;
+}
+
+.tools-section-heading {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.tools-section-heading h2 {
+  margin-bottom: 0;
+  font-size: clamp(2.2rem, 6vw, 3.25rem);
+  font-weight: 800;
+}
+
+.tools-showcase {
+  position: relative;
+  width: min(100%, 1100px);
+  aspect-ratio: 16 / 9;
+  margin: 0 auto;
+  user-select: none;
+}
+
+.tools-ape {
+  position: absolute;
+  max-width: none;
+}
+
+.tools-ape-gron {
+  top: 40%;
+  left: 25%;
+  z-index: 1;
+  width: 23%;
+}
+
+.tools-ape-blaa {
+  top: 49%;
+  left: 51%;
+  z-index: 1;
+  width: 21%;
+}
+
+.tools-tag {
+  position: absolute;
+  z-index: 2;
+  border: 1.5px solid rgba(28, 23, 23, 1);
+  border-radius: 2px;
+  background: #f7f4ef;
+  color: rgba(28, 23, 23, 1);
+  padding: 0.5rem 0.9rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  white-space: nowrap;
+  animation: tools-tag-float 5s ease-in-out infinite;
+}
+
+@keyframes tools-tag-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.tools-tag-1 {
+  top: 8%;
+  left: 1%;
+  animation-delay: 0s;
+}
+
+.tools-tag-2 {
+  top: 23%;
+  left: 16%;
+  animation-delay: 0.6s;
+}
+
+.tools-tag-3 {
+  top: 29%;
+  left: 34%;
+  animation-delay: 1.2s;
+}
+
+.tools-tag-4 {
+  top: 20%;
+  left: 49%;
+  animation-delay: 1.8s;
+}
+
+.tools-tag-5 {
+  top: 15%;
+  left: 76%;
+  animation-delay: 2.4s;
+}
+
+.tools-tag-6 {
+  top: 43%;
+  left: 4%;
+  animation-delay: 3s;
+}
+
+.tools-tag-7 {
+  top: 36%;
+  left: 58%;
+  animation-delay: 3.6s;
+}
+
+.tools-tag-8 {
+  top: 32%;
+  left: 90%;
+  animation-delay: 4.2s;
+}
+
+.tools-tag-9 {
+  top: 49%;
+  left: 79%;
+  animation-delay: 4.8s;
+}
+
 @media (max-width: 900px) {
   .about-page {
     min-height: 0;
@@ -510,6 +630,25 @@ p {
     justify-self: center;
     width: min(100%, 540px);
     margin-left: 0;
+  }
+
+  .tools-showcase {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    aspect-ratio: auto;
+  }
+
+  .tools-ape,
+  .tools-tag {
+    position: static;
+    animation: none;
+  }
+
+  .tools-ape {
+    width: min(45%, 220px);
   }
 }
 
