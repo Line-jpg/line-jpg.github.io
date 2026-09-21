@@ -1,12 +1,5 @@
 :root {
-  font-family:
-    Inter,
-    ui-sans-serif,
-    system-ui,
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    sans-serif;
+  font-family: "Ibarra Real Nova", Georgia, "Times New Roman", serif;
   color: rgb(68, 27, 7);
   background: #f7f4ef;
   font-synthesis: none;
@@ -63,9 +56,16 @@ textarea {
 
 .brand {
   color: #111827;
-  font-weight: 800;
+  font-weight: 700;
   text-decoration: none;
   zoom: 0.8;
+}
+
+button.brand {
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
 }
 
 .site-nav {
@@ -75,15 +75,21 @@ textarea {
   gap: 0.25rem;
 }
 
-.site-nav a {
+.site-nav a,
+.site-nav button {
+  border: none;
   border-radius: 999px;
   color: rgba(28, 23, 23, 1);
+  background: transparent;
   padding: 0.55rem 0.8rem;
+  font: inherit;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .site-nav a.active,
-.site-nav a:hover {
+.site-nav a:hover,
+.site-nav button:hover {
   color: #f7f4ef;
   background: rgba(28, 23, 23, 1);
 }
@@ -91,7 +97,6 @@ textarea {
 .page {
   width: min(100% - 2rem, 1120px);
   margin: 0 auto;
-  padding: 3rem 0 0;
 }
 
 .narrow {
@@ -248,8 +253,11 @@ p {
   color: #ffffff;
   background: rgb(54, 48, 48);
   padding: 0.7rem 1rem;
+  font-family: inherit;
+  font-size: inherit;
   font-weight: 700;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .button.secondary {
@@ -260,6 +268,7 @@ p {
 .project-section {
   padding: 3rem 0;
   border-top: 1px solid #ded6ca;
+  scroll-margin-top: 5.5rem;
 }
 
 .project-section-heading {
@@ -270,7 +279,7 @@ p {
 .project-section-heading h2 {
   margin-bottom: 0;
   font-size: clamp(2rem, 5vw, 2.75rem);
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .project-list {
@@ -304,7 +313,7 @@ p {
 .project-row-body h3 {
   margin-bottom: 0;
   font-size: 1.5rem;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .project-row-body p {
@@ -324,52 +333,6 @@ p {
   object-fit: cover;
 }
 
-.project-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.project-card {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr);
-  align-items: stretch;
-  overflow: hidden;
-  border-radius: 0.75rem;
-  text-decoration: none;
-  min-height: 320px;
-}
-
-.project-card img {
-  width: 100%;
-  height: 100%;
-  aspect-ratio: auto;
-  object-fit: cover;
-}
-
-.project-card-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 0.75rem;
-  background: #161616;
-  padding: 2.5rem 3rem;
-}
-
-.project-card-content .eyebrow {
-  color: #f7f4ef;
-  opacity: 0.75;
-}
-
-.project-card-content h2 {
-  color: #fffaf3;
-}
-
-.project-card-content p {
-  max-width: 46ch;
-  color: rgba(247, 244, 239, 0.75);
-}
-
 .detail-image {
   width: 100%;
   aspect-ratio: 16 / 9;
@@ -382,7 +345,7 @@ p {
   display: inline-flex;
   margin-bottom: 1.5rem;
   color: rgba(28, 23, 23, 1);
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .tag-list {
@@ -402,35 +365,6 @@ p {
   padding: 0.35rem 0.7rem;
   font-size: 0.9rem;
   font-weight: 700;
-}
-
-.info-list {
-  display: grid;
-  gap: 1rem;
-  margin-top: 2rem;
-}
-
-.info-list div,
-.contact-list {
-  border: 1px solid #e5ddd2;
-  border-radius: 0.75rem;
-  background: #fffaf3;
-  padding: 1rem;
-}
-
-.info-list h2 {
-  font-size: 1.15rem;
-}
-
-.contact-list {
-  display: grid;
-  gap: 0.75rem;
-  padding-left: 2rem;
-}
-
-.contact-list a {
-  color: rgba(28, 23, 23, 1);
-  font-weight: 800;
 }
 
 .about-page {
@@ -499,7 +433,7 @@ p {
 .tools-section-heading h2 {
   margin-bottom: 0;
   font-size: clamp(2.2rem, 6vw, 3.25rem);
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .tools-showcase {
@@ -667,7 +601,6 @@ p {
 .footer-heading {
   margin-bottom: 0.75rem;
   color: #fffaf3;
-  font-family: "Playfair Display", Georgia, serif;
   font-size: clamp(2.4rem, 5vw, 3.75rem);
   font-weight: 700;
   line-height: 1;
@@ -704,7 +637,6 @@ p {
 
 .footer-value {
   color: #fffaf3;
-  font-family: "Playfair Display", Georgia, serif;
   font-size: 1.25rem;
   font-weight: 600;
   text-decoration: none;
@@ -752,26 +684,9 @@ p {
     justify-content: flex-start;
   }
 
-  .page {
-    padding-top: 2rem;
-  }
-
   .hero-section {
     min-height: auto;
     padding: 1rem 0;
-  }
-
-  .project-card {
-    grid-template-columns: 1fr;
-    min-height: 0;
-  }
-
-  .project-card img {
-    aspect-ratio: 16 / 10;
-  }
-
-  .project-card-content {
-    padding: 1.75rem;
   }
 
   .project-row {

@@ -1,5 +1,7 @@
-import { Link } from "react-router";
+import { useEffect } from "react";
+import { Link, useLocation } from "react-router";
 import projects from "../data/projects";
+import { scrollToSection } from "../scroll";
 
 const toolTags = [
   { label: "Koncept Design", className: "tools-tag-1" },
@@ -15,6 +17,13 @@ const toolTags = [
 
 function HomePage() {
   const featuredProjects = projects.slice(0, 3);
+  const { state } = useLocation();
+
+  useEffect(() => {
+    if (state?.scrollTo) {
+      scrollToSection(state.scrollTo);
+    }
+  }, [state]);
 
   return (
     <div className="page">
@@ -31,12 +40,20 @@ function HomePage() {
             jeg projekter, proces og det, jeg lærer undervejs.
           </p>
           <div className="actions">
-            <Link className="button" to="/projects">
+            <button
+              type="button"
+              className="button"
+              onClick={() => scrollToSection("projekter")}
+            >
               Se projekter
-            </Link>
-            <Link className="button secondary" to="/contact">
+            </button>
+            <button
+              type="button"
+              className="button secondary"
+              onClick={() => scrollToSection("kontakt")}
+            >
               Kontakt mig
-            </Link>
+            </button>
           </div>
         </div>
 
@@ -74,7 +91,7 @@ function HomePage() {
         </div>
       </section>
 
-      <section className="project-section">
+      <section className="project-section" id="projekter">
         <div className="project-section-heading">
           <h2>Mine projekter</h2>
         </div>

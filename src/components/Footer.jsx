@@ -2,7 +2,7 @@ function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="site-footer">
+    <footer className="site-footer" id="kontakt">
       <div className="footer-inner">
         <div className="footer-intro">
           <h2 className="footer-heading">
