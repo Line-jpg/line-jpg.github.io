@@ -1,6 +1,18 @@
 import { Link } from "react-router";
 import projects from "../data/projects";
 
+const toolTags = [
+  { label: "Koncept Design", className: "tools-tag-1" },
+  { label: "Figma", className: "tools-tag-2" },
+  { label: "VSC", className: "tools-tag-3" },
+  { label: "UX/UI", className: "tools-tag-4" },
+  { label: "SupaBase", className: "tools-tag-5" },
+  { label: "Claude Code", className: "tools-tag-6" },
+  { label: "Photoshop", className: "tools-tag-7" },
+  { label: "GitHub", className: "tools-tag-8" },
+  { label: "REACT", className: "tools-tag-9" },
+];
+
 function HomePage() {
   const featuredProjects = projects.slice(0, 3);
 
@@ -88,6 +100,35 @@ function HomePage() {
                 alt={`Preview af ${project.title}`}
               />
             </Link>
+          ))}
+        </div>
+      </section>
+
+      <section className="tools-section">
+        <div className="tools-section-heading">
+          <h2>Værktøjer</h2>
+        </div>
+
+        <div className="tools-showcase">
+          <img
+            className="tools-ape tools-ape-gron"
+            src="/gronAbe.svg"
+            alt="grøn abe"
+            draggable={false}
+          />
+          <img
+            className="tools-ape tools-ape-blaa"
+            src="/blaaAbe.svg"
+            alt="blå abe"
+            draggable={false}
+          />
+          {toolTags.map((tool) => (
+            <span
+              className={`tools-tag ${tool.className}`}
+              key={tool.className}
+            >
+              {tool.label}
+            </span>
           ))}
         </div>
       </section>
