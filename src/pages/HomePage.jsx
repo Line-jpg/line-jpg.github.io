@@ -15,8 +15,8 @@ function HomePage() {
             alt="Line Svendsen"
           />
           <p className="hero-text">
-            Jeg arbejder med frontend, design og digitale produkter. Her
-            samler jeg projekter, proces og det, jeg lærer undervejs.
+            Jeg arbejder med frontend, design og digitale produkter. Her samler
+            jeg projekter, proces og det, jeg lærer undervejs.
           </p>
           <div className="actions">
             <Link className="button" to="/projects">
