@@ -1,12 +1,12 @@
 const projects = [
   {
-    slug: "LilleRo",
-    title: "LilleRo",
+    slug: "Vuuh",
+    title: "Onboarding for Vuuh",
     year: "2026",
-    summary: "App lavet for forældre til børn med diabetes.",
+    summary: "En onboarding-proces for kunder af Vuuh.",
     description:
-      "Portfolioen viser udvalgte projekter og fungerer som et udgangspunkt for at arbejde med komponenter, routing, styling og deployment.",
-    tags: ["React", "Vite", "GitHub Pages"],
+      "En onboarding-proces for kunder af Vuuh, hvor vi sikrer en god start og oplevelse med deres produkt.",
+    tags: ["UX/UI", "Brugertest", "Figma"],
     image: `${import.meta.env.BASE_URL}LilleRoFront.png`,
     links: [
       {

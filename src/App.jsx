@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router";
 import Footer from "./components/Footer";
+import IntroOverlay from "./components/IntroOverlay";
 import Navbar from "./components/Navbar";
 import AboutPage from "./pages/AboutPage";
 import HomePage from "./pages/HomePage";
@@ -9,6 +10,8 @@ import ProjectPage from "./pages/ProjectPage";
 function App() {
   return (
     <>
+      <IntroOverlay />
+
       <Navbar />
 
       <main>
