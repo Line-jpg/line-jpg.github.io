@@ -27,6 +27,14 @@ body {
   font-weight: 500;
 }
 
+/* The hero collage is deliberately offset past the page edge. Clip that bleed
+   at the viewport so it never produces a horizontal scrollbar. `clip` rather
+   than `hidden`: it creates no scroll container, so overflow-y stays visible
+   and sticky positioning keeps working. */
+main {
+  overflow-x: clip;
+}
+
 a {
   color: inherit;
 }
@@ -700,5 +708,74 @@ p {
     order: -1;
     min-height: 0;
     aspect-ratio: 16 / 10;
+  }
+}
+
+.intro-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background: #441b07;
+  transform-origin: center;
+  will-change: transform, opacity;
+}
+
+.intro-overlay-text {
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(1.5rem, 6vw, 3.25rem);
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  text-align: center;
+  text-wrap: balance;
+  animation: intro-text-in 1.1s ease-out both;
+}
+
+.intro-overlay.is-leaving {
+  animation: intro-zoom-out 0.9s ease-in-out forwards;
+  pointer-events: none;
+}
+
+@keyframes intro-text-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes intro-zoom-out {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  to {
+    opacity: 0;
+    transform: scale(1.35);
+  }
+}
+
+@keyframes intro-fade-out {
+  to {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .intro-overlay-text {
+    animation: none;
+  }
+
+  .intro-overlay.is-leaving {
+    animation: intro-fade-out 0.4s linear forwards;
   }
 }
