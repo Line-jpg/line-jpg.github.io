@@ -342,19 +342,109 @@ p {
   object-fit: cover;
 }
 
-.detail-image {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  border-radius: 0.75rem;
-  object-fit: cover;
-  margin-bottom: 2rem;
-}
-
 .back-link {
   display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
   margin-bottom: 1.5rem;
   color: rgba(28, 23, 23, 1);
   font-weight: 700;
+  text-decoration: none;
+}
+
+.back-link span {
+  transition: transform 0.15s ease;
+}
+
+.back-link:hover span {
+  transform: translateX(-3px);
+}
+
+.detail-intro {
+  max-width: 760px;
+}
+
+.detail-steps {
+  padding: 3rem 0 4rem;
+}
+
+.detail-step {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+  gap: 2rem;
+  align-items: center;
+}
+
+.detail-box {
+  position: relative;
+  z-index: 2;
+  max-width: 380px;
+  border: 1.5px solid rgba(28, 23, 23, 1);
+  border-radius: 2px;
+  background: #f7f4ef;
+  padding: 1.1rem 1.35rem;
+}
+
+.detail-step.offset .detail-box {
+  margin-left: 6rem;
+}
+
+.detail-box-number {
+  color: rgba(28, 23, 23, 0.5);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 5px;
+}
+
+.detail-box h2 {
+  margin: 0.2rem 0 0.4rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.detail-box p {
+  margin: 0;
+}
+
+.detail-arrow {
+  display: block;
+  width: 160px;
+  height: 34px;
+  margin: 0.25rem 0 0.25rem 2.5rem;
+  fill: none;
+  stroke: rgba(28, 23, 23, 1);
+  stroke-width: 1.5;
+}
+
+.detail-arrow.flip {
+  margin-left: 4rem;
+  transform: scaleX(-1);
+}
+
+/* Collagen går helt ud til højre skærmkant; main klipper overløbet. */
+.detail-collage {
+  display: flex;
+  justify-content: center;
+  margin: -4rem calc(-1 * max((100vw - 1120px) / 2, 1rem)) -4rem 0;
+  pointer-events: none;
+}
+
+.detail-step.offset .detail-collage {
+  justify-content: flex-end;
+}
+
+.detail-collage-image {
+  width: min(100%, 420px);
+  aspect-ratio: 4 / 3;
+  border: 8px solid #fffaf3;
+  border-radius: 6px;
+  object-fit: cover;
+  filter: drop-shadow(0 6px 16px rgba(28, 23, 23, 0.25));
+  transform: rotate(-4deg);
+}
+
+.detail-step.offset .detail-collage-image {
+  transform: rotate(3deg);
 }
 
 .tag-list {
@@ -708,6 +798,27 @@ p {
     order: -1;
     min-height: 0;
     aspect-ratio: 16 / 10;
+  }
+
+  .detail-step {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.5rem;
+  }
+
+  .detail-step.offset .detail-box {
+    margin-left: 0;
+  }
+
+  .detail-collage,
+  .detail-step.offset .detail-collage {
+    justify-content: center;
+    margin: 0 0 1rem;
+  }
+
+  .detail-arrow,
+  .detail-arrow.flip {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
