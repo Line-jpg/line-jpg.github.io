@@ -4,8 +4,7 @@ const projects = [
     title: "Onboarding for Vuuh",
     year: "2026",
     summary: "En onboarding-proces for kunder af Vuuh.",
-    description:
-      "En onboarding-proces for kunder af Vuuh, hvor vi sikrer en god start og oplevelse med deres produkt.",
+    description: "KOMMER SNART.",
     heading1: "",
     text1: "",
     image1: "",
@@ -20,16 +19,7 @@ const projects = [
     image4: "",
     tags: ["UX/UI", "Brugertest", "Figma"],
     image: `${import.meta.env.BASE_URL}vuuhMockUp.png`,
-    links: [
-      {
-        label: "Live site",
-        href: "https://line-jpg.github.io/lillero-webapp/",
-      },
-      {
-        label: "GitHub repo",
-        href: "https://github.com/Line-jpg/lillero-webapp",
-      },
-    ],
+    links: [],
   },
   {
     slug: "Mellemrum",
@@ -39,14 +29,17 @@ const projects = [
       "Et projektkort, som du kan kopiere og ændre til dit eget projekt.",
     description:
       "Dette projekt omhandler optimering af et website for den opdigtede virksomhed Mellemrum. Målet er at forbedre errorhandling og accesibilitet.",
-    heading1: "",
-    text1: "",
+    heading1: "Errorhandling",
+    text1:
+      "Vi har implementeret en robust errorhandling, der sikrer, at brugere får en god oplevelse, selv når der opstår fejl.",
     image1: `${import.meta.env.BASE_URL}errorHandling.png`,
-    heading2: "",
-    text2: "",
+    heading2: "Loading states",
+    text2:
+      "Tilføjelse af loading states for at give brugerne feedback under indlæsning.",
     image2: `${import.meta.env.BASE_URL}skeletonMellemrum.png`,
-    heading3: "",
-    text3: "",
+    heading3: "Supabase integration",
+    text3:
+      "Optimeret Supabase for at kunne holde styr på data, og sikre en robust og skalérbar database.",
     image3: "",
     heading4: "",
     text4: "",
@@ -57,6 +50,10 @@ const projects = [
       {
         label: "Live site",
         href: "https://line-jpg.github.io/mellemrum/",
+      },
+      {
+        label: "GitHub repo",
+        href: "https://github.com/Line-jpg/mellemrum",
       },
     ],
   },
