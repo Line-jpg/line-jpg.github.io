@@ -85,13 +85,7 @@ function ProjectPage() {
                   <p>{section.text}</p>
                 </div>
                 {section.image && (
-                  <div className="detail-collage">
-                    <img
-                      className="detail-collage-image"
-                      src={section.image}
-                      alt=""
-                    />
-                  </div>
+                  <img className="detail-image" src={section.image} alt="" />
                 )}
               </div>
               {i < sections.length - 1 && <DetailArrow flip={i % 2 === 1} />}

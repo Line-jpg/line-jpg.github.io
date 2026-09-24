@@ -365,20 +365,23 @@ p {
 }
 
 .detail-steps {
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 auto;
   padding: 3rem 0 4rem;
 }
 
 .detail-step {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
-  gap: 2rem;
+  grid-template-columns: auto minmax(0, 420px);
+  justify-content: start;
+  gap: 1.5rem;
   align-items: center;
 }
 
 .detail-box {
-  position: relative;
-  z-index: 2;
-  max-width: 380px;
+  width: 380px;
+  max-width: 100%;
   border: 1.5px solid rgba(28, 23, 23, 1);
   border-radius: 2px;
   background: #f7f4ef;
@@ -421,30 +424,11 @@ p {
   transform: scaleX(-1);
 }
 
-/* Collagen går helt ud til højre skærmkant; main klipper overløbet. */
-.detail-collage {
-  display: flex;
-  justify-content: center;
-  margin: -4rem calc(-1 * max((100vw - 1120px) / 2, 1rem)) -4rem 0;
-  pointer-events: none;
-}
-
-.detail-step.offset .detail-collage {
-  justify-content: flex-end;
-}
-
-.detail-collage-image {
-  width: min(100%, 420px);
-  aspect-ratio: 4 / 3;
-  border: 8px solid #fffaf3;
-  border-radius: 6px;
+.detail-image {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border-radius: 0.5rem;
   object-fit: cover;
-  filter: drop-shadow(0 6px 16px rgba(28, 23, 23, 0.25));
-  transform: rotate(-4deg);
-}
-
-.detail-step.offset .detail-collage-image {
-  transform: rotate(3deg);
 }
 
 .tag-list {
@@ -802,17 +786,19 @@ p {
 
   .detail-step {
     grid-template-columns: minmax(0, 1fr);
-    gap: 1.5rem;
+    gap: 1rem;
+  }
+
+  .detail-steps {
+    width: auto;
+  }
+
+  .detail-box {
+    width: auto;
   }
 
   .detail-step.offset .detail-box {
     margin-left: 0;
-  }
-
-  .detail-collage,
-  .detail-step.offset .detail-collage {
-    justify-content: center;
-    margin: 0 0 1rem;
   }
 
   .detail-arrow,

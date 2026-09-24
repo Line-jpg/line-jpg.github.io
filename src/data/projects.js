@@ -74,11 +74,11 @@ const projects = [
     heading2: "Teknik",
     text2:
       "Teknisk har vi udviklet løsningen som en Single Page Application i React med CRUD-funktionalitet og datahåndtering gennem Supabase. Dette gør det muligt for brugerne at oprette, læse, redigere og slette opslag, samtidig med at applikationen leverer en dynamisk og responsiv brugeroplevelse.",
-    image2: `${import.meta.env.BASE_URL}skemaLilleRo.png`,
+    image2: `${import.meta.env.BASE_URL}iphoneMockupLilleRo.png`,
     heading3: "Metode",
     text3:
       "Vores beslutninger er understøttet af teorier som User-Centered Design, Double Diamond og iterativ udvikling, der har sikret, at brugerens behov har været i centrum gennem hele processen. Research, spørgeskemaer og interviews har desuden givet et solidt grundlag for både design- og udviklingsbeslutninger.",
-    image3: "",
+    image3: `${import.meta.env.BASE_URL}skemaLilleRo.png`,
     heading4: "Værdi",
     text4:
       "Løsningen skaber værdi ved at kombinere praktiske værktøjer, troværdig information og et fællesskab for forældre i samme situation. Dette kan bidrage til større tryghed, bedre overblik og lettere adgang til både hjælp og viden i hverdagen.",
