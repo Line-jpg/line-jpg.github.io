@@ -72,8 +72,8 @@ function HomePage() {
           />
           <img
             className="hero-collage-item hero-collage-placeholder"
-            src="/placeHolder.svg"
-            alt="Portfolio billede"
+            src="/lineFarve.png"
+            alt="Line Svendsen"
             draggable={false}
           />
           <img
