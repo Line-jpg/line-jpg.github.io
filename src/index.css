@@ -148,6 +148,9 @@ button.brand {
   left: 28%;
   z-index: 2;
   width: 42%;
+  /* Samme format som den tidligere placeholder (338×465), så layoutet ikke flytter sig */
+  aspect-ratio: 338 / 465;
+  object-fit: cover;
   border-radius: 0.375rem;
 }
 
