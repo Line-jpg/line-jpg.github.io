@@ -1,4 +1,15 @@
 :root {
+  /* Farver og mål til projektsiden (ProjectPage.module.css og CaseMedia.module.css). */
+  --ink: #1c1717;
+  --paper: #f7f4ef;
+  --paper-light: #fffaf3;
+  --muted: #363030;
+  --line: rgba(28, 23, 23, 0.25);
+  --accent: #441b07;
+  --strong: #1c1717;
+  --max: 1120px;
+  --serif: "Ibarra Real Nova Variable", Georgia, "Times New Roman", serif;
+
   font-family: "Ibarra Real Nova Variable", Georgia, "Times New Roman", serif;
   color: #441b07;
   background: #f7f4ef;
@@ -345,114 +356,6 @@ p {
   object-fit: cover;
 }
 
-.back-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  margin-bottom: 1.5rem;
-  color: rgba(28, 23, 23, 1);
-  font-weight: 700;
-  text-decoration: none;
-}
-
-.back-link span {
-  transition: transform 0.15s ease;
-}
-
-.back-link:hover span {
-  transform: translateX(-3px);
-}
-
-.detail-intro {
-  max-width: 760px;
-}
-
-.detail-steps {
-  width: fit-content;
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 3rem 0 4rem;
-}
-
-.detail-step {
-  display: grid;
-  grid-template-columns: auto minmax(0, 420px);
-  justify-content: start;
-  gap: 1.5rem;
-  align-items: center;
-}
-
-.detail-box {
-  width: 380px;
-  max-width: 100%;
-  border: 1.5px solid rgba(28, 23, 23, 1);
-  border-radius: 2px;
-  background: #f7f4ef;
-  padding: 1.1rem 1.35rem;
-}
-
-.detail-step.offset .detail-box {
-  margin-left: 6rem;
-}
-
-.detail-box-number {
-  color: rgba(28, 23, 23, 0.5);
-  font-size: 0.85rem;
-  font-weight: 600;
-  letter-spacing: 5px;
-}
-
-.detail-box h2 {
-  margin: 0.2rem 0 0.4rem;
-  font-size: 1.4rem;
-  font-weight: 700;
-}
-
-.detail-box p {
-  margin: 0;
-}
-
-.detail-arrow {
-  display: block;
-  width: 160px;
-  height: 34px;
-  margin: 0.25rem 0 0.25rem 2.5rem;
-  fill: none;
-  stroke: rgba(28, 23, 23, 1);
-  stroke-width: 1.5;
-}
-
-.detail-arrow.flip {
-  margin-left: 4rem;
-  transform: scaleX(-1);
-}
-
-.detail-image {
-  width: 100%;
-  aspect-ratio: 16 / 10;
-  border-radius: 0.5rem;
-  object-fit: cover;
-}
-
-.tag-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  padding: 0;
-  margin: 1.25rem 0;
-  list-style: none;
-}
-
-.tag-list li {
-  border: 1px solid #ded6ca;
-  border-radius: 999px;
-  background: #fffaf3;
-  color: #475569;
-  padding: 0.35rem 0.7rem;
-  font-size: 0.9rem;
-  font-weight: 700;
-}
-
 .about-page {
   display: flex;
   align-items: center;
@@ -785,29 +688,6 @@ p {
     order: -1;
     min-height: 0;
     aspect-ratio: 16 / 10;
-  }
-
-  .detail-step {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 1rem;
-  }
-
-  .detail-steps {
-    width: auto;
-  }
-
-  .detail-box {
-    width: auto;
-  }
-
-  .detail-step.offset .detail-box {
-    margin-left: 0;
-  }
-
-  .detail-arrow,
-  .detail-arrow.flip {
-    margin-left: auto;
-    margin-right: auto;
   }
 }
 
