@@ -24,6 +24,7 @@
   height: clamp(240px, 28vw, 420px);
   background: var(--paper-light);
   border: 1px solid var(--line);
+  border-radius: 0.5rem;
 }
 
 .figure img {
@@ -67,6 +68,7 @@
   text-align: center;
   background: var(--paper-light);
   border: 1px solid var(--line);
+  border-radius: 0.5rem;
 }
 
 .comparison .placeholder {

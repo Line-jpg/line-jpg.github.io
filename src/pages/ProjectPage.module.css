@@ -2,18 +2,24 @@
   overflow: hidden;
 }
 
-/* Hero */
+/* Tilbage-link over coverbilledet */
+.back {
+  width: min(var(--max), calc(100% - 48px));
+  margin: auto;
+  padding: 48px 0 24px;
+}
+
+/* Hero (under coverbilledet) */
 .hero {
   width: min(var(--max), calc(100% - 48px));
   margin: auto;
-  padding: 48px 0 42px;
+  padding: 42px 0;
 }
 
 .backLink {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  margin-bottom: 2rem;
   color: var(--ink);
   font-weight: 700;
   text-decoration: none;
@@ -41,7 +47,7 @@
   max-width: 900px;
   margin: 42px 0 30px;
   font-family: var(--serif);
-  font-size: clamp(3.5rem, 9vw, 7rem);
+  font-size: 48px;
   font-weight: 400;
   line-height: 0.88;
   letter-spacing: -0.03em;
@@ -55,11 +61,32 @@
   line-height: 1.5;
 }
 
+/* Kategorier som tags */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tags li {
+  border: 1px solid #ded6ca;
+  border-radius: 999px;
+  background: var(--paper-light);
+  color: #475569;
+  padding: 0.35rem 0.7rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
 /* Cover */
 .cover {
   width: min(var(--max), calc(100% - 48px));
   margin: auto;
   height: clamp(280px, 48svh, 560px);
+  border-radius: 0.5rem;
   overflow: hidden;
 }
 
@@ -146,28 +173,18 @@
 .overview h2 {
   margin: 0;
   font-family: var(--serif);
-  font-size: clamp(1.8rem, 3.2vw, 3rem);
+  font-size: 36px;
   font-weight: 400;
   line-height: 1.15;
   letter-spacing: -0.02em;
 }
 
+/* Links bruger de globale .button-klasser fra index.css. */
 .links {
   margin-top: 30px;
   display: flex;
   flex-wrap: wrap;
-  gap: 12px 24px;
-}
-
-.links a,
-.storyText a {
-  color: var(--strong);
-  padding-bottom: 4px;
-  border-bottom: 1px solid currentColor;
-  font-size: 0.8rem;
-  letter-spacing: 0.07em;
-  text-decoration: none;
-  text-transform: uppercase;
+  gap: 0.75rem;
 }
 
 /* Story */
@@ -221,9 +238,8 @@
   line-height: 1.65;
 }
 
-.storyText a {
-  display: inline-block;
-  margin: 5px 18px 12px 0;
+.storyText .links {
+  margin-top: 12px;
 }
 
 /* Billeder mellem tekstafsnittene. */
@@ -263,6 +279,20 @@
   grid-column: 2;
   grid-row: 1 / span 2;
   align-self: center;
+}
+
+/* Hver 3. sektion: billedet til venstre, teksten til højre. */
+.caseSplitReverse {
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+}
+
+.caseSplitReverse .storyHeading,
+.caseSplitReverse .storyText {
+  grid-column: 2;
+}
+
+.caseSplitReverse .caseMediaRow {
+  grid-column: 1;
 }
 
 /* layout: "text-above" – teksten i to spalter over billederne. */
@@ -359,14 +389,18 @@
 }
 
 @media (max-width: 760px) {
+  .back {
+    width: calc(100% - 32px);
+    padding: 32px 0 20px;
+  }
+
   .hero {
     width: calc(100% - 32px);
-    padding: 32px 0 42px;
+    padding: 32px 0;
   }
 
   .hero h1 {
     margin: 32px 0 25px;
-    font-size: clamp(3rem, 15vw, 5rem);
   }
 
   .cover {

@@ -43,8 +43,8 @@ const projects = [
     intro: "En onboarding-proces for kunder af Vuuh.",
     description: "KOMMER SNART.",
     services: "UX/UI · Brugertest · Figma",
-    collaboration: "",
-    tools: "",
+    collaboration: "Gruppeprojekt · 3. semester",
+    tools: "Brugertest · Figma · UX/UI",
     cover: asset("vuuhMockUp.png"),
     coverAlt: "",
     links: [],
@@ -150,9 +150,9 @@ const projects = [
     intro: "Kan vi hjælpe forældre med at få ro i maven?",
     description:
       "Dette gruppeprojekt omhandler udviklingen af en app til forældre med børn, der har type 1 diabetes. Formålet med app'en er at gøre hverdagen mere overskuelig for familier, som ofte står med mange praktiske og mentale udfordringer i forbindelse med sygdommen.",
-    services: "",
-    collaboration: "",
-    tools: "",
+    services: "Frontend · UX/UI · Brugerinddragelse",
+    collaboration: "2 mandsgruppeprojekt · 2. semester",
+    tools: "Figma · React · Supabase · VSC · GitHub",
     cover: asset("LilleRoFront.png"),
     coverAlt: "",
     links: [

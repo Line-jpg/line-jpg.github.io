@@ -32,6 +32,10 @@ function ProjectPage() {
   }
 
   const number = String(index + 1).padStart(2, "0");
+  const tags = (project.category ?? "")
+    .split("·")
+    .map((tag) => tag.trim())
+    .filter(hasText);
 
   const facts = [
     { label: "Fremgangsmåder", value: project.services },
@@ -57,7 +61,7 @@ function ProjectPage() {
 
   return (
     <article className={styles.page}>
-      <header className={styles.hero}>
+      <div className={styles.back}>
         <Link
           className={styles.backLink}
           to="/"
@@ -65,15 +69,7 @@ function ProjectPage() {
         >
           <span aria-hidden="true">←</span> Tilbage til projekter
         </Link>
-
-        <div className={styles.top}>
-          <span>{[number, project.category].filter(hasText).join(" · ")}</span>
-          {hasText(project.year) && <span>{project.year}</span>}
-        </div>
-
-        <h1>{project.title}</h1>
-        {hasText(project.intro) && <p>{project.intro}</p>}
-      </header>
+      </div>
 
       {hasText(project.cover) ? (
         <div className={styles.cover}>
@@ -98,6 +94,24 @@ function ProjectPage() {
         )
       )}
 
+      <header className={styles.hero}>
+        <div className={styles.top}>
+          <span>{number}</span>
+          {hasText(project.year) && <span>{project.year}</span>}
+        </div>
+
+        <h1>{project.title}</h1>
+        {hasText(project.intro) && <p>{project.intro}</p>}
+
+        {tags.length > 0 && (
+          <ul className={styles.tags}>
+            {tags.map((tag) => (
+              <li key={tag}>{tag}</li>
+            ))}
+          </ul>
+        )}
+      </header>
+
       {(facts.length > 0 || showAbout) && (
         <section className={styles.overview}>
           {facts.length > 0 && (
@@ -120,6 +134,7 @@ function ProjectPage() {
                 <div className={styles.links}>
                   {links.map((link) => (
                     <a
+                      className="button secondary"
                       href={link.url}
                       key={link.url}
                       target="_blank"
@@ -143,7 +158,11 @@ function ProjectPage() {
                 section.layout === "text-above"
                   ? styles.caseTextAbove
                   : section.images.length > 0
-                    ? styles.caseSplit
+                    ? `${styles.caseSplit} ${
+                        (sectionIndex + 1) % 3 === 0
+                          ? styles.caseSplitReverse
+                          : ""
+                      }`
                     : ""
               }`}
               key={sectionIndex}
@@ -158,16 +177,21 @@ function ProjectPage() {
                   <p key={i}>{paragraph}</p>
                 ))}
 
-                {section.links.map((link) => (
-                  <a
-                    href={link.url}
-                    key={link.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {link.label} ↗
-                  </a>
-                ))}
+                {section.links.length > 0 && (
+                  <div className={styles.links}>
+                    {section.links.map((link) => (
+                      <a
+                        className="button secondary"
+                        href={link.url}
+                        key={link.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {link.label} ↗
+                      </a>
+                    ))}
+                  </div>
+                )}
               </div>
 
               {section.images.length > 0 && (
