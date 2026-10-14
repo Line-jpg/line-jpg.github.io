@@ -13,7 +13,7 @@ function ProjectPage() {
   const index = projects.findIndex((item) => item.slug === slug);
   const project = projects[index];
 
-  // Start øverst, også når man går videre til næste projekt.
+  // Start øverst, når man åbner et projekt.
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [slug]);
@@ -31,11 +31,10 @@ function ProjectPage() {
     );
   }
 
-  const nextProject = projects[index + 1];
   const number = String(index + 1).padStart(2, "0");
 
   const facts = [
-    { label: "Discipliner", value: project.services },
+    { label: "Fremgangsmåder", value: project.services },
     { label: "Projektform", value: project.collaboration },
     { label: "Værktøjer", value: project.tools },
   ].filter((fact) => hasText(fact.value));
@@ -85,9 +84,7 @@ function ProjectPage() {
               alt={project.coverAlt || project.title}
             />
             {hasText(project.category) && (
-              <div className={styles.coverOverlay}>
-                <span>{project.category}</span>
-              </div>
+              <div className={styles.coverOverlay}></div>
             )}
           </div>
         </div>
@@ -198,12 +195,12 @@ function ProjectPage() {
       )}
 
       <Link
-        className={styles.next}
-        to={nextProject ? `/projects/${nextProject.slug}` : "/"}
-        state={nextProject ? undefined : { scrollTo: "projekter" }}
+        className={styles.overviewLink}
+        to="/"
+        state={{ scrollTo: "projekter" }}
       >
-        <span>{nextProject ? "Næste projekt" : "Tilbage til oversigten"}</span>
-        <strong>{nextProject ? nextProject.title : "Alle projekter"} →</strong>
+        <span>Tilbage til oversigten</span>
+        <strong>Alle projekter →</strong>
       </Link>
     </article>
   );

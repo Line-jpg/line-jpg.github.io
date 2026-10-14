@@ -42,7 +42,7 @@ const projects = [
     category: "UX/UI · Brugertest · Figma",
     intro: "En onboarding-proces for kunder af Vuuh.",
     description: "KOMMER SNART.",
-    services: "",
+    services: "UX/UI · Brugertest · Figma",
     collaboration: "",
     tools: "",
     cover: asset("vuuhMockUp.png"),
@@ -146,8 +146,7 @@ const projects = [
     slug: "LilleRo",
     title: "Idéudvikling og design af appen LilleRo",
     year: "2026",
-    category:
-      "UX/UI · Frontend · Brugerinddragelse · React · Supabase · Figma",
+    category: "UX/UI · Frontend · Brugerinddragelse · React · Supabase · Figma",
     intro: "Kan vi hjælpe forældre med at få ro i maven?",
     description:
       "Dette gruppeprojekt omhandler udviklingen af en app til forældre med børn, der har type 1 diabetes. Formålet med app'en er at gøre hverdagen mere overskuelig for familier, som ofte står med mange praktiske og mentale udfordringer i forbindelse med sygdommen.",
