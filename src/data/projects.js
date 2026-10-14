@@ -211,10 +211,10 @@ const projects = [
     reflection: [""],
   },
   {
-    slug: "webshop",
-    title: "Webshop",
+    slug: "d´occasion",
+    title: "La Rouge Subbrand",
     year: "2026",
-    category: "Design · Frontend · Proces",
+    category: "Koncept udvikling · UX/UI · Design",
     intro: "",
     description:
       "Beskriv problemet, processen, din rolle, de vigtigste valg og hvad du lærte. Gør projektet konkret, så andre kan forstå dit arbejde.",
@@ -225,14 +225,18 @@ const projects = [
     coverAlt: "",
     links: [
       {
-        label: "Eksempel-link",
+        label: "Figma prototype",
+        url: "https://github.com",
+      },
+      {
+        label: "Figma",
         url: "https://github.com",
       },
     ],
     story: [
       {
         heading: "",
-        paragraphs: [""],
+        paragraphs: ["bruh"],
         layout: "",
         media: { layout: "single", items: [picture()] },
       },
