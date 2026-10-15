@@ -13,7 +13,7 @@ Personlig portfolio bygget med React 19, Vite 8 og React Router 8. Live på http
 
 - `src/App.jsx` – ruter: `/`, `/projects/:slug`, `/about`, `*` (404)
 - `src/pages/` – én fil pr. side
-- `src/components/` – Navbar, Footer, IntroOverlay, CaseMedia (billeder i projektsektioner)
+- `src/components/` – Navbar, Footer, CaseMedia (billeder i projektsektioner)
 - `src/data/projects.js` – alle projekter; `slug` bruges i URL'en. Følger skabelonen øverst i filen (`story`-sektioner med `media`). Tomme felter (`""` / `[""]`) vises ikke på projektsiden
 - `src/index.css` – global styling og CSS-variabler (`--ink`, `--accent` osv.)
 - `src/pages/ProjectPage.module.css` og `src/components/CaseMedia.module.css` – CSS-moduler til projektsiden
