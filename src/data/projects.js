@@ -272,6 +272,10 @@ const projects = [
         label: "Figma",
         url: "https://www.figma.com/design/i98oArkal1wU1PSigmsBzn/La-Rogue-Secondhand-Case?node-id=225-3&t=7li7BWWxJFleuBx5-1",
       },
+      {
+        label: "Branddeck",
+        url: "https://www.figma.com/design/i98oArkal1wU1PSigmsBzn/La-Rogue-Secondhand-Case?node-id=721-6304&t=64xCu5yq8CqpsPwz-1",
+      },
     ],
     story: [
       {
@@ -373,7 +377,7 @@ const projects = [
       },
     ],
     reflection: [
-      "I takt med at vi udviklede d’occasion, var det vigtigt for mig at bevare det elegante og feminine udtryk, som allerede kendetegnede La RŌUGE. Selvom d’occasion blev udviklet som et subbrand med brandarketypen The Lover, ønskede jeg ikke, at dette skulle føre til et design med en tydelig seksuel undertone. For mig handlede det i højere grad om at formidle sensualitet gennem elegance, æstetik og feminine detaljer frem for at skabe et udtryk, der virkede direkte eller seksualiseret.",
+      "I takt med at vi udviklede d'occasion, var det vigtigt for mig at bevare det elegante og feminine udtryk, som allerede kendetegnede La RŌUGE. Selvom d’occasion blev udviklet som et subbrand med brandarketypen The Lover, ønskede jeg ikke, at dette skulle føre til et design med en tydelig seksuel undertone. For mig handlede det i højere grad om at formidle sensualitet gennem elegance, æstetik og feminine detaljer frem for at skabe et udtryk, der virkede direkte eller seksualiseret.",
       "Derfor var jeg særligt opmærksom på, at vores visuelle valg understøttede den ønskede identitet. Undervejs måtte jeg flere gange udfordre retningen i vores idéudvikling, når designet begyndte at bevæge sig mod et mere maskulint udtryk eller satte manden i centrum. Jeg ønskede i stedet at fastholde et univers, hvor kvinden og hendes oplevelse var omdrejningspunktet, og hvor det feminine blev fremhævet på en sofistikeret og stilren måde. Det var vigtigt for mig, at d’occasion fik sin egen identitet uden at miste forbindelsen til La RŌUGEs eksisterende brandunivers..",
     ],
   },
