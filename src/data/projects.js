@@ -40,11 +40,12 @@ const projects = [
     title: "Onboarding for Vuuh",
     year: "2026",
     category: "UX/UI · Brugertest · Figma",
-    description: "KOMMER SNART.",
+    description:
+      "Case 2 var et gruppeprojekt, med fokus på onboarding oplevelsen hos firmaet Vuuh.",
     services: "UX/UI · Brugertest · Figma",
     collaboration: "Gruppeprojekt · 3. semester",
     tools: "Brugertest · Figma · UX/UI",
-    cover: asset("vuuhMockUp.png"),
+    cover: asset("vuuhCover.png"),
     coverAlt: "",
     links: [
       {
@@ -60,7 +61,8 @@ const projects = [
       {
         heading: "Om projektet",
         paragraphs: [
-          "Case 2 var et gruppeprojekt, med fokus på onboarding oplevelsen hos firmaet Vuuh. Deres produkt er en shopify extension service, der hjælper webshopejere med at slippe for manuelt arbejde, og lad Vuuh automatisk dele produktinformation og billeder mellem brands og butikker ved hjælp af AI. Problemet var, at Vuuh var svært at sætte op uden hjælp udefra. For at kunne lave en skarp onboarding, ville vi finde ud af, hvad der gjorde processen besværlig, og hvordan den kunne gøres nemmere med de funktioner, Vuuh allerede havde. ",
+          "Vuuh's produkt er en shopify extension service.",
+          "Det hjælper webshopejere med at slippe for manuelt arbejde, og lad Vuuh automatisk dele produktinformation og billeder mellem brands og butikker ved hjælp af AI. Problemet var, at Vuuh var svært at sætte op uden hjælp udefra. For at kunne lave en skarp onboarding, ville vi finde ud af, hvad der gjorde processen besværlig, og hvordan den kunne gøres nemmere med de funktioner, Vuuh allerede havde. ",
         ],
         layout: "",
         media: { layout: "single", items: [picture()] },
@@ -178,6 +180,82 @@ const projects = [
     reflection: [""],
   },
   {
+    slug: "d´occasion",
+    title: "La Rouge Subbrand",
+    year: "2026",
+    category: "Koncept udvikling · UX/UI · Designsystemer · Figma",
+    intro:
+      "Udtænk et subbrand for La Rouge, der har fokus på preowned fashion.",
+    description:
+      "Beskriv problemet, processen, din rolle, de vigtigste valg og hvad du lærte. Gør projektet konkret, så andre kan forstå dit arbejde.",
+    services: "",
+    collaboration: "Gruppeprojekt · 3. semester",
+    tools: "Figma",
+    cover: asset("d´occasionCover.png"),
+    coverAlt:
+      "Billede af navnet på vores subbrand, d´occasion, med en rød baggrund og et hvidt logo.",
+    links: [
+      {
+        label: "Figma prototype",
+        url: "https://www.figma.com/proto/i98oArkal1wU1PSigmsBzn/La-Rogue-Secondhand-Case?node-id=513-12734&p=f&t=oJP8U4KNp5vBXKnA-1&scaling=min-zoom&content-scaling=fixed&page-id=225%3A3&starting-point-node-id=274%3A3893&show-proto-sidebar=1",
+      },
+      {
+        label: "Figma",
+        url: "https://www.figma.com/design/i98oArkal1wU1PSigmsBzn/La-Rogue-Secondhand-Case?node-id=225-3&t=7li7BWWxJFleuBx5-1",
+      },
+    ],
+    story: [
+      {
+        heading: "Case og udfordring",
+        paragraphs: [
+          "Hvad handlede casen om, hvad var udfordringen, og hvad var dit bidrag?",
+        ],
+        layout: "",
+        media: { layout: "single", items: [picture()] },
+      },
+      {
+        heading:
+          "Hvilke indsigter gav vores undersøgelser, og hvordan prioriterede vi?",
+        paragraphs: [
+          "Hvad fandt du frem til, hvad prioriterede du, og hvilket fagligt grundlag brugte du?",
+        ],
+        layout: "",
+        media: { layout: "single", items: [picture()] },
+      },
+      {
+        heading: "Løsning og faglige valg",
+        paragraphs: [
+          "Hvad forbedrede du, og hvordan hænger løsningen sammen med din undersøgelse?",
+        ],
+        layout: "",
+        media: { layout: "single", items: [picture()] },
+      },
+      {
+        heading: "Resultat og dokumentation",
+        paragraphs: [
+          "Hvad blev resultatet, og hvordan undersøgte eller verificerede du forbedringen?",
+        ],
+        layout: "",
+        media: { layout: "single", items: [picture()] },
+      },
+      {
+        heading: "Faglig refleksion",
+        paragraphs: [
+          "Hvilke valg og fravalg traf du, hvad lærte du, og hvad kunne være næste skridt?",
+        ],
+      },
+      {
+        heading: "Forretningspotentiale",
+        paragraphs: [
+          "Hvordan skaber løsningen værdi for brugeren, virksomheden eller samfundet?",
+        ],
+        layout: "",
+        media: { layout: "single", items: [picture()] },
+      },
+    ],
+    reflection: [""],
+  },
+  {
     slug: "LilleRo",
     title: "Idéudvikling og design af appen LilleRo",
     year: "2026",
@@ -241,57 +319,6 @@ const projects = [
         ],
         layout: "",
         media: { layout: "single", items: [picture("Værdi")] },
-      },
-    ],
-    reflection: [""],
-  },
-  {
-    slug: "d´occasion",
-    title: "La Rouge Subbrand",
-    year: "2026",
-    category: "Koncept udvikling · UX/UI · Design",
-    intro: "",
-    description:
-      "Beskriv problemet, processen, din rolle, de vigtigste valg og hvad du lærte. Gør projektet konkret, så andre kan forstå dit arbejde.",
-    services: "",
-    collaboration: "",
-    tools: "",
-    cover: "",
-    coverAlt: "",
-    links: [
-      {
-        label: "Figma prototype",
-        url: "https://github.com",
-      },
-      {
-        label: "Figma",
-        url: "https://github.com",
-      },
-    ],
-    story: [
-      {
-        heading: "",
-        paragraphs: ["bruh"],
-        layout: "",
-        media: { layout: "single", items: [picture()] },
-      },
-      {
-        heading: "",
-        paragraphs: [""],
-        layout: "",
-        media: { layout: "single", items: [picture()] },
-      },
-      {
-        heading: "",
-        paragraphs: [""],
-        layout: "",
-        media: { layout: "single", items: [picture()] },
-      },
-      {
-        heading: "",
-        paragraphs: [""],
-        layout: "",
-        media: { layout: "single", items: [picture()] },
       },
     ],
     reflection: [""],

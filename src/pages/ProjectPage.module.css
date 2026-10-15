@@ -13,7 +13,7 @@
 .hero {
   width: min(var(--max), calc(100% - 48px));
   margin: auto;
-  padding: 42px 0;
+  padding: 42px 0 0px;
 }
 
 .backLink {
