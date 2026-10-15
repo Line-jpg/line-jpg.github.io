@@ -164,7 +164,7 @@ const projects = [
         },
       },
       {
-        heading: "Min priotering",
+        heading: "Min prioritering",
         paragraphs: [
           "Efter at have fået overblik i koden, kunne jeg finde ud af hvad jeg vil have fokus på.",
           "Jeg gjorde det mit læremål, at arbejde med loading states, errorhandling og accesibilitet. Dette har jeg prioriteret, da det er områder jeg ikke har arbejdet med før.",
@@ -268,15 +268,15 @@ const projects = [
     year: "2026",
     category: "Koncept udvikling · UX/UI · Designsystemer · Figma",
     intro:
-      "Udtænk et subbrand for La Rouge, der har fokus på preowned fashion.",
+      "Navnet på subbrandet er d'occasion, og kommer fra fransk, hvor det også kan betyde: preowned.",
     description:
-      "Beskriv problemet, processen, din rolle, de vigtigste valg og hvad du lærte. Gør projektet konkret, så andre kan forstå dit arbejde.",
+      "Udtænk et subbrand for La Rouge, der har fokus på preowned fashion.",
     services: "",
     collaboration: "Gruppeprojekt · 3. semester",
     tools: "Figma",
-    cover: asset("d´occasionCover.png"),
+    cover: asset("d'occasionCover.png"),
     coverAlt:
-      "Billede af navnet på vores subbrand, d´occasion, med en rød baggrund og et hvidt logo.",
+      "Billede af navnet på vores subbrand, d'occasion, med en rød baggrund og et hvidt logo.",
     links: [
       {
         label: "Figma prototype",
@@ -291,7 +291,7 @@ const projects = [
       {
         heading: "Case og udfordring",
         paragraphs: [
-          "Hvad handlede casen om, hvad var udfordringen, og hvad var dit bidrag?",
+          "Casen handlede om at videreudvikle LA RŌUGEs eksisterende secondhand-koncept og undersøge, hvordan det kunne få en tydeligere identitet og stå stærkere som selvstændigt brand. Udfordringen var, at konceptet manglede et særskilt visuelt udtryk og en klar kommunikation, hvilket begrænsede dets potentiale. Mit bidrag bestod i konceptudvikling og design med fokus på at skabe en tydeligere visuel retning og styrke konceptets identitet.",
         ],
         layout: "",
         media: { layout: "single", items: [picture()] },
@@ -299,27 +299,77 @@ const projects = [
       {
         heading:
           "Hvilke indsigter gav vores undersøgelser, og hvordan prioriterede vi?",
+        layout: "text-above",
         paragraphs: [
-          "Hvad fandt du frem til, hvad prioriterede du, og hvilket fagligt grundlag brugte du?",
+          "Ud fra vores desk research fandt vi følgende indsigter: SE BILAG",
+          "",
         ],
-        layout: "",
-        media: { layout: "single", items: [picture()] },
+        layout: "text-above",
+        media: {
+          layout: "single",
+          items: [picture("Indsigter", "", "indsigterLaRouge.png")],
+        },
       },
       {
-        heading: "Løsning og faglige valg",
+        heading: "Målgruppe",
         paragraphs: [
-          "Hvad forbedrede du, og hvordan hænger løsningen sammen med din undersøgelse?",
+          "Gennem desk research fandt vi frem til, at LA RŌUGEs eksisterende målgruppe ikke i høj grad køber genbrug. Derfor valgte vi at rette konceptet mod en yngre målgruppe, som i højere grad interesserer sig for secondhand og cirkulært forbrug. Det dannede grundlag for vores konceptudvikling og design, hvor målet var at skabe et univers, der appellerer til den nye målgruppe.",
         ],
-        layout: "",
-        media: { layout: "single", items: [picture()] },
       },
       {
-        heading: "Resultat og dokumentation",
+        heading: "Koncept udvikling",
         paragraphs: [
-          "Hvad blev resultatet, og hvordan undersøgte eller verificerede du forbedringen?",
+          "Det vigtigste valg under udviklingen af subbrandet var at skabe et visuelt udtryk, der både adskilte sig fra LA RŌUGE og samtidig bevarede en visuel forbindelse til moderselskabet.",
+          "I denne del har vi hoppet rigtig meget frem of tilbage mellem de foreskellige visuelle identiteter, men rundede af med moodboard 4, som vi kalder for det endelige moodboard. Det var det moodboard, som vi følte bedst repræsenterede vores subbrand, og som vi kunne arbejde videre med i designprocessen.",
+          "Vi beholdte elegancen fra La RŌUGE, men tilføjede et mere legende og kreativt udtryk, der appellerede til vores nye målgruppen. Vi valgte at fokusere på en kombination af farver, typografi og grafiske elementer, der kunne skabe en stærk visuel identitet og differentiere subbrandet fra konkurrenterne.",
         ],
-        layout: "",
-        media: { layout: "single", items: [picture()] },
+        media: {
+          layout: "carousel",
+          items: [
+            picture("Pop og Flash moodboard", "", "popFlash.png"),
+            picture(
+              "Art deco og flapper æstetik moodboard",
+              "",
+              "artFlapper.png",
+            ),
+            picture(
+              "Fransk modeillustration og håndskrift moodboard",
+              "",
+              "franskSkrift.png",
+            ),
+            picture("Det endelige moodboard", "", "skrevetMood.png"),
+          ],
+        },
+      },
+      {
+        heading: "Styletile og designsystem",
+        layout: "text-above",
+        media: {
+          layout: "carousel",
+          items: [
+            picture("Vores logo designs", "", "laRougeLogo.png"),
+            picture("Farver", "", "laRougeFarver.png"),
+            picture("Typografi", "", "laRougeTypo.png"),
+            picture("Tone of voice", "", "laRougeTone.png"),
+            picture("Styletile", "", "laRougeSystem.png"),
+          ],
+        },
+      },
+      {
+        heading: "Gimmicks",
+        theme: "dark",
+        layout: "text-above",
+        paragraphs: [
+          "Som en stor del af vores subbrand, udviklede vi nogle gimmicks, som kunne bruges til at skabe opmærksomhed omkring subbrandet og dets produkter. Den ene gimmick tager fat i rødstrømpe bevægelsen, hvor man får et par røde strømper med ved første køb - noget som kan være med til at skabbe et fælleskab, hvis man er en del af det.",
+          "",
+        ],
+        media: {
+          layout: "comparison",
+          items: [
+            picture("Gimmick 1", "", "laRougeSokker.png"),
+            picture("Gimmick 2", "", "laRougeTak.png"),
+          ],
+        },
       },
       {
         heading: "Faglig refleksion",
