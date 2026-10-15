@@ -41,7 +41,7 @@ const projects = [
         heading: "Om projektet",
         paragraphs: [
           "Vuuh's produkt er en shopify extension service.",
-          "Det hjælper webshopejere med at slippe for manuelt arbejde, og lad Vuuh automatisk dele produktinformation og billeder mellem brands og butikker ved hjælp af AI. Problemet var, at Vuuh var svært at sætte op uden hjælp udefra. For at kunne lave en skarp onboarding, ville vi finde ud af, hvad der gjorde processen besværlig, og hvordan den kunne gøres nemmere med de funktioner, Vuuh allerede havde. ",
+          "Det hjælper webshopejere med at slippe for manuelt arbejde, og lader Vuuh automatisk dele produktinformation og billeder mellem brands og butikker ved hjælp af AI. Problemet opstår, da Vuuh er svært at sætte op uden hjælp udefra. For at kunne lave en skarp onboarding, ville vi finde ud af, hvad der gjorde processen besværlig, og hvordan den kunne gøres nemmere med de funktioner, Vuuh allerede havde.",
         ],
         layout: "",
         media: { layout: "single", items: [picture()] },
@@ -53,17 +53,25 @@ const projects = [
           "På baggrund af dette prioriterede vi, at forenkle flowet, forebygge fejl og tydeliggøre brugerens næste handling. Fokus var at reducere unødvendige steps og klik samt sikre tydelig feedback, så brugeren altid ved, hvor vedkommende befinder sig i processen, og hvad der mangler. Målet var at skabe en mere intuitiv onboarding, der gør det nemmere at gennemføre processen uden hjælp.",
           "Det faglige grundlag var Jakob Nielsens heuristikker 5. Error Prevention og 7. Flexibility and Efficiency of Use. Den første handler om at forebygge fejl og usikkerhed, mens den anden fokuserer på at gøre interaktioner mere effektive og reducere unødvendige handlinger. Heuristikkerne understøttede derfor prioriteringen af et enklere og mere overskueligt brugerflow, der mindsker risikoen for frafald og tab af potentielle kunder.",
         ],
-        layout: "",
-        media: { layout: "single", items: [picture()] },
+        layout: "text-above",
+        media: {
+          layout: "text-above",
+          items: [picture("Undersøgelse af onboarding", "", "uxFindings.png")],
+        },
       },
       {
         heading: "Løsning og faglige valg",
+        theme: "dark",
         paragraphs: [
           "For at imødekomme udfordringerne fra undersøgelsen valgte vi at implementere et guidet onboarding-flow (Wizard/Guided Steps) til testordren. Brugeren bliver trin for trin introduceret til processen, hvor hvert step forklarer den næste handling. Ved at trykke på “GOT IT!” kan brugeren fortsætte til næste trin. Samtidig nedtones informationer, som ikke er relevante for den aktuelle handling, så brugerens fokus holdes på det vigtigste.",
           "Efter download af testordren vises en loading-side, der tydeliggør, at der er tale om en testordre, som ikke bliver vist i brugerens webshop. Når processen er gennemført, vises en pop-up med beskeden “Order is successfully downloaded!”.",
         ],
-        layout: "",
-        media: { layout: "single", items: [picture()] },
+        links: [
+          {
+            label: "Link til gennemgang af optimiseret onboarding",
+            url: "https://www.figma.com/proto/MeZ6V3TVoAOar2gzLS52rb/Case-2---Vuuh?node-id=187-1116&starting-point-node-id=187%3A1116&t=zavENyVEb9OSFZTQ-1",
+          },
+        ],
       },
       {
         heading: "Resultat og dokumentation",
@@ -76,21 +84,24 @@ const projects = [
       {
         heading: "Refleksion",
         paragraphs: [
-          "Projektet har givet mig værdifuld erfaring med at analysere brugerflows og identificere problemområder. Jeg har lært, hvor vigtigt det er at prioritere brugervenlighed og tydelig kommunikation i onboarding-processer. Desuden har jeg fået indsigt i, hvordan heuristikker kan anvendes til at guide designbeslutninger og forbedre brugeroplevelsen.",
+          "Projektet har givet mig værdifuld erfaring med at analysere brugerflows og identificere problemområder. Mine vigtigste refleksioner er:",
+          "Brugervenlighed: Vigtigheden af at skabe en overskuelig og intuitiv onboarding-proces.",
+          "Kommunikation: Tydelig kommunikation er afgørende for at guide brugeren gennem processen.",
+          "Heuristikker: Hvordan heuristikker kan bruges til at identificere forbedringsmuligheder og kvalificere designbeslutninger.",
         ],
         layout: "",
         media: { layout: "single", items: [picture()] },
       },
       {
         heading: "Forretningspotentiale",
+        theme: "dark",
         paragraphs: [
-          "Løsningen har et stort forretningspotentiale, da den forbedrer brugeroplevelsen og øger effektiviteten i onboarding-processen. Dette kan føre til øget kundetilfredshed og forbedret brugervenlighed.",
+          "Løsningen giver mulighed for, at kunderne af Vuuh selv kan gennemføre onboarding uden hjælp udefra. Det kan reducere behovet for support og frigøre ressourcer, som kan bruges på andre områder. Samtidig kan en mere brugervenlig onboarding øge konverteringsraten og fastholde kunderne, hvilket kan have en positiv effekt på Vuuh's forretning.",
         ],
         layout: "",
         media: { layout: "single", items: [picture()] },
       },
     ],
-    reflection: [""],
   },
   {
     slug: "Mellemrum",
@@ -142,6 +153,7 @@ const projects = [
         paragraphs: [
           "Efter at have fået overblik i koden, kunne jeg finde ud af hvad jeg vil have fokus på.",
           "Jeg gjorde det mit læremål, at arbejde med loading states, errorhandling og accesibilitet. Dette har jeg prioriteret, da det er områder jeg ikke har arbejdet med før.",
+          "Prioriteringener blev rangeret, og kom også fra et teknisk Audit.",
         ],
         media: {
           layout: "single",
@@ -273,7 +285,6 @@ const projects = [
       {
         heading:
           "Hvilke indsigter gav vores undersøgelser, og hvordan prioriterede vi?",
-        layout: "text-above",
         paragraphs: [
           "Ud fra vores desk research kom vi frem til vores 3 hovedindsigter.",
           "Dem prioriterede vi, da de var de mest relevante for vores konceptudvikling og design.",
