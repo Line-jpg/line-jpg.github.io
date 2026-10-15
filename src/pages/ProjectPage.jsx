@@ -205,7 +205,7 @@ function ProjectPage() {
 
       {reflection.length > 0 && (
         <section className={styles.reflection}>
-          <h2>Refleksion</h2>
+          <h2>Ekstra</h2>
           <div>
             {reflection.map((paragraph, i) => (
               <p key={i}>{paragraph}</p>
