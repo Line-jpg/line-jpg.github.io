@@ -27,8 +27,11 @@
   border-radius: 0.5rem;
 }
 
+/* Hele billedet vises i sit eget format – intet beskæres. */
 .figure img {
-  object-fit: cover;
+  height: auto;
+  max-height: 80vh;
+  object-fit: contain;
 }
 
 .figure video {

@@ -158,11 +158,7 @@ function ProjectPage() {
                 section.layout === "text-above"
                   ? styles.caseTextAbove
                   : section.images.length > 0
-                    ? `${styles.caseSplit} ${
-                        (sectionIndex + 1) % 3 === 0
-                          ? styles.caseSplitReverse
-                          : ""
-                      }`
+                    ? styles.caseSplit
                     : ""
               }`}
               key={sectionIndex}

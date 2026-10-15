@@ -53,6 +53,10 @@ const projects = [
         url: "https://www.figma.com/proto/MeZ6V3TVoAOar2gzLS52rb/Case-2---Vuuh?node-id=187-1116&starting-point-node-id=187%3A1116&t=ENCYw39DZVTtNzA8-1",
       },
       {
+        label: "FigJam",
+        url: "https://www.figma.com/board/NZdBDp6xkuzHmOg9IzNhYy/Case-2---LAES?node-id=0-1&p=f&t=5MOYvDb8w1F8UH3v-0",
+      },
+      {
         label: "UX Audit",
         url: "https://drive.google.com/file/d/1r6ZC2bulI5YFLgJ1n-_2rd0doWEptNk5/view?usp=sharing",
       },
@@ -121,11 +125,12 @@ const projects = [
     intro: "",
     description:
       "Dette projekt omhandler optimering af et website for den opdigtede virksomhed Mellemrum. Målet er at forbedre errorhandling og accesibilitet.",
-    services: "",
-    collaboration: "",
-    tools: "",
+    services:
+      "Loading states · Optimering · Tilmeldingsflow · Errorhandling · Accesibilitet",
+    collaboration: "Individuelt projekt · 3. semester",
+    tools: "VSC · React · SupaBase REST API · GitHub",
     cover: asset("mellemRum.png"),
-    coverAlt: "",
+    coverAlt: "Billede af website for Mellemrum",
     links: [
       {
         label: "Live site",
@@ -138,25 +143,59 @@ const projects = [
     ],
     story: [
       {
-        heading: "Errorhandling",
+        heading: "Om casen",
         paragraphs: [
-          "Vi har implementeret en robust errorhandling, der sikrer, at brugere får en god oplevelse, selv når der opstår fejl.",
+          "I Mellemrum videreudviklede jeg en eksisterende eventplatform med fokus på at skabe en mere sammenhængende løsning. Jeg arbejdede med at forbedre kodens struktur og gøre platformen mere overskuelig og funktionel for både deltagere og arrangører.",
+        ],
+        layout: "",
+        media: { layout: "single", items: [picture()] },
+      },
+      {
+        heading: "Få styr på koden",
+        paragraphs: [
+          "Et af mine første mål, har været at få styr på de steder i koden der har været problematiske.",
+          "Det kunne være steder hvor der var for mange komponenter i en fil, eller hvor komponenter var for store og uoverskuelige. Jeg har derfor delt komponenter op i mindre dele, og flyttet dem til deres egne filer. Dette har gjort koden mere overskuelig og lettere at arbejde med fremover.",
+          "Den store ændring har været at flytte alle komponenter til deres egne filer, og importere dem i App.jsx. Dette har gjort det lettere at finde rundt i koden, og gjort det mere overskueligt at arbejde med.",
+          "Se bilag",
         ],
         layout: "",
         media: {
           layout: "single",
-          items: [picture("Errorhandling", "", "errorHandling.png")],
+          items: [picture("Komponentstruktur", "", "componentsMellemrum.png")],
+        },
+      },
+      {
+        heading: "Min priotering",
+        paragraphs: [
+          "Efter at have fået overblik i koden, kunne jeg finde ud af hvad jeg vil have fokus på.",
+          "Jeg gjorde det mit læremål, at arbejde med loading states, errorhandling og accesibilitet. Dette har jeg prioriteret, da det er områder jeg ikke har arbejdet med før.",
+        ],
+        layout: "",
+        media: {
+          layout: "single",
+          items: [picture("")],
         },
       },
       {
         heading: "Loading states",
         paragraphs: [
-          "Tilføjelse af loading states for at give brugerne feedback under indlæsning.",
+          "Målet her, har været at tilføje loading states for at give brugerne feedback under indlæsning.",
         ],
         layout: "",
         media: {
           layout: "single",
           items: [picture("Loading states", "", "skeletonMellemrum.png")],
+        },
+      },
+      {
+        heading: "Errorhandling",
+        paragraphs: [
+          "Der er implementeret en robust errorhandling, der sikrer, at brugere får en god oplevelse, selv når der opstår fejl.",
+        ],
+        layout: "",
+        media: {
+          layout: "single",
+          items: [picture("Errorhandling", "", "errorHandling.png")],
         },
       },
       {

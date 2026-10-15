@@ -220,7 +220,7 @@
   margin: 0;
   color: inherit;
   font-family: var(--serif);
-  font-size: clamp(2rem, 3.6vw, 3.4rem);
+  font-size: 46px;
   font-weight: 400;
   line-height: 1;
   letter-spacing: -0.02em;
@@ -263,12 +263,6 @@
   grid-row: 1;
 }
 
-.caseSplit .storyHeading h2 {
-  font-size: clamp(1.85rem, 3vw, 2.8rem);
-  font-weight: 450;
-  line-height: 1.06;
-}
-
 .caseSplit .storyText {
   grid-column: 1;
   grid-row: 2;
@@ -279,20 +273,6 @@
   grid-column: 2;
   grid-row: 1 / span 2;
   align-self: center;
-}
-
-/* Hver 3. sektion: billedet til venstre, teksten til højre. */
-.caseSplitReverse {
-  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
-}
-
-.caseSplitReverse .storyHeading,
-.caseSplitReverse .storyText {
-  grid-column: 2;
-}
-
-.caseSplitReverse .caseMediaRow {
-  grid-column: 1;
 }
 
 /* layout: "text-above" – teksten i to spalter over billederne. */
