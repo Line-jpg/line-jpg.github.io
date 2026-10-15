@@ -1,23 +1,22 @@
+import { Fragment, useEffect } from "react";
 import { Link, useParams } from "react-router";
+import CaseMedia from "../components/CaseMedia";
 import projects from "../data/projects";
+import styles from "./ProjectPage.module.css";
 
-// Buet pil der forbinder to tekstbokse. Spejles hver anden gang (zigzag).
-function DetailArrow({ flip }) {
-  return (
-    <svg
-      className={`detail-arrow${flip ? " flip" : ""}`}
-      viewBox="0 0 160 34"
-      aria-hidden="true"
-    >
-      <path d="M10 2 C 8 20, 50 28, 110 28" />
-      <path d="M101 22 L111 28 L101 33" />
-    </svg>
-  );
-}
+// Tomme skabelonfelter ("" eller [""]) skal ikke vises på siden.
+const hasText = (value) => typeof value === "string" && value.trim() !== "";
+const filled = (value) => [value].flat().filter(hasText);
 
 function ProjectPage() {
   const { slug } = useParams();
-  const project = projects.find((item) => item.slug === slug);
+  const index = projects.findIndex((item) => item.slug === slug);
+  const project = projects[index];
+
+  // Start øverst, når man åbner et projekt.
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [slug]);
 
   if (!project) {
     return (
@@ -32,67 +31,197 @@ function ProjectPage() {
     );
   }
 
-  const sections = [1, 2, 3, 4]
-    .map((n) => ({
-      heading: project[`heading${n}`],
-      text: project[`text${n}`],
-      image: project[`image${n}`],
+  const number = String(index + 1).padStart(2, "0");
+  const tags = (project.category ?? "")
+    .split("·")
+    .map((tag) => tag.trim())
+    .filter(hasText);
+
+  const facts = [
+    { label: "Fremgangsmåder", value: project.services },
+    { label: "Projektform", value: project.collaboration },
+    { label: "Værktøjer", value: project.tools },
+  ].filter((fact) => hasText(fact.value));
+
+  const links = (project.links ?? []).filter((link) => hasText(link.url));
+  const showAbout = hasText(project.description) || links.length > 0;
+
+  const story = (project.story ?? [])
+    .map((section) => ({
+      ...section,
+      paragraphs: filled(section.paragraphs),
+      links: (section.links ?? []).filter((link) => hasText(link.url)),
+      images: (section.media?.items ?? []).filter((item) => hasText(item.src)),
     }))
-    .filter((section) => section.text);
+    .filter(
+      (section) => hasText(section.heading) || section.paragraphs.length > 0,
+    );
+
+  const reflection = filled(project.reflection);
 
   return (
-    <article className="page">
-      <div className="detail-intro">
-        <Link className="back-link" to="/" state={{ scrollTo: "projekter" }}>
+    <article className={styles.page}>
+      <div className={styles.back}>
+        <Link
+          className={styles.backLink}
+          to="/"
+          state={{ scrollTo: "projekter" }}
+        >
           <span aria-hidden="true">←</span> Tilbage til projekter
         </Link>
-
-        <p className="eyebrow">{project.year}</p>
-        <h1>{project.title}</h1>
-        <p className="lead">{project.description}</p>
-
-        <ul className="tag-list">
-          {project.tags.map((tag) => (
-            <li key={tag}>{tag}</li>
-          ))}
-        </ul>
-
-        <div className="actions">
-          {project.links.map((link) => (
-            <a
-              className="button secondary"
-              href={link.href}
-              key={link.href}
-              rel="noreferrer"
-              target="_blank"
-            >
-              {link.label}
-            </a>
-          ))}
-        </div>
       </div>
 
-      {sections.length > 0 && (
-        <section className="detail-steps">
-          {sections.map((section, i) => (
-            <div key={i}>
-              <div className={`detail-step${i % 2 ? " offset" : ""}`}>
-                <div className="detail-box">
-                  <span className="detail-box-number">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
-                  {section.heading && <h2>{section.heading}</h2>}
-                  <p>{section.text}</p>
+      {hasText(project.cover) ? (
+        <div className={styles.cover}>
+          <div className={styles.coverMedia}>
+            <img
+              className={styles.coverImage}
+              src={project.cover}
+              alt={project.coverAlt || project.title}
+            />
+            {hasText(project.category) && (
+              <div className={styles.coverOverlay}></div>
+            )}
+          </div>
+        </div>
+      ) : (
+        hasText(project.category) && (
+          <div className={styles.cover}>
+            <div className={styles.coverGraphic}>
+              <span>{project.category}</span>
+            </div>
+          </div>
+        )
+      )}
+
+      <header className={styles.hero}>
+        <div className={styles.top}>
+          <span>{number}</span>
+          {hasText(project.year) && <span>{project.year}</span>}
+        </div>
+
+        <h1>{project.title}</h1>
+        {hasText(project.intro) && <p>{project.intro}</p>}
+
+        {tags.length > 0 && (
+          <ul className={styles.tags}>
+            {tags.map((tag) => (
+              <li key={tag}>{tag}</li>
+            ))}
+          </ul>
+        )}
+      </header>
+
+      {(facts.length > 0 || showAbout) && (
+        <section className={styles.overview}>
+          {facts.length > 0 && (
+            <div>
+              {facts.map((fact) => (
+                <Fragment key={fact.label}>
+                  <p className={styles.label}>{fact.label}</p>
+                  <span>{fact.value}</span>
+                </Fragment>
+              ))}
+            </div>
+          )}
+
+          {showAbout && (
+            <div className={styles.about}>
+              <p className={styles.label}>Om projektet</p>
+              {hasText(project.description) && <h2>{project.description}</h2>}
+
+              {links.length > 0 && (
+                <div className={styles.links}>
+                  {links.map((link) => (
+                    <a
+                      className="button secondary"
+                      href={link.url}
+                      key={link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {link.label} ↗
+                    </a>
+                  ))}
                 </div>
-                {section.image && (
-                  <img className="detail-image" src={section.image} alt="" />
+              )}
+            </div>
+          )}
+        </section>
+      )}
+
+      {story.length > 0 && (
+        <section className={styles.story} aria-label="Projektets historie">
+          {story.map((section, sectionIndex) => (
+            <div
+              className={`${styles.storySection} ${
+                section.layout === "text-above"
+                  ? styles.caseTextAbove
+                  : section.images.length > 0
+                    ? styles.caseSplit
+                    : ""
+              } ${section.theme === "dark" ? styles.dark : ""}`}
+              key={sectionIndex}
+            >
+              <div className={styles.storyHeading}>
+                <span>{String(sectionIndex + 1).padStart(2, "0")}</span>
+                {hasText(section.heading) && <h2>{section.heading}</h2>}
+              </div>
+
+              <div className={styles.storyText}>
+                {section.paragraphs.map((paragraph, i) => (
+                  <p key={i}>{paragraph}</p>
+                ))}
+
+                {section.links.length > 0 && (
+                  <div className={styles.links}>
+                    {section.links.map((link) => (
+                      <a
+                        className="button secondary"
+                        href={link.url}
+                        key={link.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {link.label} ↗
+                      </a>
+                    ))}
+                  </div>
                 )}
               </div>
-              {i < sections.length - 1 && <DetailArrow flip={i % 2 === 1} />}
+
+              {section.images.length > 0 && (
+                <div className={styles.caseMediaRow}>
+                  <CaseMedia
+                    key={`${project.slug}-${sectionIndex}`}
+                    media={{ ...section.media, items: section.images }}
+                  />
+                </div>
+              )}
             </div>
           ))}
         </section>
       )}
+
+      {reflection.length > 0 && (
+        <section className={styles.reflection}>
+          <h2>Refleksion</h2>
+          <div>
+            {reflection.map((paragraph, i) => (
+              <p key={i}>{paragraph}</p>
+            ))}
+          </div>
+        </section>
+      )}
+
+      <Link
+        className={styles.overviewLink}
+        to="/"
+        state={{ scrollTo: "projekter" }}
+      >
+        <span>Tilbage til oversigten</span>
+        <strong>Alle projekter →</strong>
+      </Link>
     </article>
   );
 }

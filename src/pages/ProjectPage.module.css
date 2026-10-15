@@ -1,0 +1,453 @@
+.page {
+  overflow: hidden;
+}
+
+/* Tilbage-link over coverbilledet */
+.back {
+  width: min(var(--max), calc(100% - 48px));
+  margin: auto;
+  padding: 48px 0 24px;
+}
+
+/* Hero (under coverbilledet) */
+.hero {
+  width: min(var(--max), calc(100% - 48px));
+  margin: auto;
+  padding: 42px 0 0px;
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--ink);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.backLink span {
+  transition: transform 0.15s ease;
+}
+
+.backLink:hover span {
+  transform: translateX(-3px);
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  color: var(--accent);
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  max-width: 900px;
+  margin: 42px 0 30px;
+  font-family: var(--serif);
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 0.88;
+  letter-spacing: -0.03em;
+}
+
+.hero > p {
+  max-width: 570px;
+  margin: 0;
+  color: var(--muted);
+  font-size: clamp(1.05rem, 1.6vw, 1.35rem);
+  line-height: 1.5;
+}
+
+/* Kategorier som tags */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tags li {
+  border: 1px solid #ded6ca;
+  border-radius: 999px;
+  background: var(--paper-light);
+  color: #475569;
+  padding: 0.35rem 0.7rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+/* Cover */
+.cover {
+  width: min(var(--max), calc(100% - 48px));
+  margin: auto;
+  height: clamp(280px, 48svh, 560px);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.coverMedia {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.coverImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.coverOverlay {
+  position: absolute;
+  inset: 0;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: var(--paper-light);
+  background: linear-gradient(
+    to top,
+    rgba(28, 23, 23, 0.82) 0%,
+    rgba(28, 23, 23, 0.42) 32%,
+    rgba(28, 23, 23, 0.08) 62%,
+    transparent 78%
+  );
+}
+
+.coverOverlay span,
+.coverGraphic span {
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.coverOverlay span {
+  margin-bottom: 12px;
+}
+
+.coverGraphic {
+  height: 100%;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: var(--paper-light);
+  background: var(--strong);
+}
+
+/* Overblik */
+.overview {
+  width: min(var(--max), calc(100% - 48px));
+  margin: auto;
+  padding: 58px 0;
+  display: grid;
+  grid-template-columns: 0.72fr 1.6fr;
+  gap: clamp(45px, 7vw, 90px);
+}
+
+.about {
+  grid-column: 2;
+}
+
+.label {
+  margin: 0 0 10px;
+  color: var(--accent);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.overview span {
+  display: block;
+  max-width: 270px;
+  margin-bottom: 28px;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.overview h2 {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+/* Links bruger de globale .button-klasser fra index.css. */
+.links {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+/* Story */
+.story {
+  width: min(var(--max), calc(100% - 48px));
+  margin: 0 auto 60px;
+  border-top: 1px solid var(--line);
+}
+
+.storySection {
+  padding: 48px 0;
+  display: grid;
+  grid-template-columns: 0.9fr 1.2fr;
+  gap: clamp(45px, 7vw, 90px);
+  border-bottom: 1px solid var(--line);
+}
+
+.storyHeading {
+  display: grid;
+  grid-template-columns: 38px 1fr;
+  gap: 16px;
+}
+
+.storyHeading span {
+  padding-top: 5px;
+  color: var(--accent);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+}
+
+.storyHeading h2,
+.reflection h2 {
+  margin: 0;
+  color: inherit;
+  font-family: var(--serif);
+  font-size: 46px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.storyText {
+  max-width: 650px;
+}
+
+.storyText p,
+.reflection p {
+  margin: 0 0 18px;
+  color: var(--muted);
+  font-size: 0.98rem;
+  line-height: 1.65;
+}
+
+.storyText .links {
+  margin-top: 12px;
+}
+
+/* Billeder mellem tekstafsnittene. */
+.caseMediaRow {
+  grid-column: 1 / -1;
+  min-width: 0;
+}
+
+/* Tekst til venstre, billeder til højre. */
+.caseSplit {
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  grid-template-rows: auto 1fr;
+  column-gap: clamp(32px, 5vw, 72px);
+  row-gap: 22px;
+  padding: 52px 0;
+  align-items: start;
+}
+
+.caseSplit .storyHeading {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.caseSplit .storyText {
+  grid-column: 1;
+  grid-row: 2;
+  max-width: 520px;
+}
+
+.caseSplit .caseMediaRow {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  align-self: center;
+}
+
+/* layout: "text-above" – teksten i to spalter over billederne. */
+.caseTextAbove {
+  grid-template-columns: 1fr;
+  gap: 28px;
+}
+
+.caseTextAbove .storyHeading {
+  max-width: 700px;
+}
+
+.caseTextAbove .storyText {
+  max-width: none;
+  columns: 2;
+  column-gap: clamp(32px, 5vw, 72px);
+}
+
+.caseTextAbove .storyText p {
+  break-inside: avoid;
+}
+
+.caseTextAbove .caseMediaRow {
+  grid-column: 1;
+  margin-top: 12px;
+}
+
+/* theme: "dark" – mørk boks med lys tekst, samme farver som refleksionen.
+   --muted og --line overskrives, så tekst og billedtekster i CaseMedia også
+   bliver lyse. */
+.storySection.dark {
+  --muted: rgba(247, 244, 239, 0.8);
+  --line: rgba(247, 244, 239, 0.25);
+  margin: 24px 0;
+  padding: 56px clamp(24px, 5vw, 56px);
+  border-bottom: 0;
+  border-radius: 0.5rem;
+  color: var(--paper-light);
+  background: var(--strong);
+}
+
+.dark .storyHeading span {
+  color: rgba(247, 244, 239, 0.6);
+}
+
+.dark .links a {
+  border-color: rgba(247, 244, 239, 0.6);
+  color: var(--paper-light);
+}
+
+/* Refleksion */
+.reflection {
+  padding: 75px max(24px, calc((100vw - var(--max)) / 2));
+  display: grid;
+  grid-template-columns: 0.9fr 1.2fr;
+  gap: clamp(45px, 7vw, 90px);
+  color: var(--paper-light);
+  background: var(--strong);
+}
+
+.reflection p {
+  color: rgba(247, 244, 239, 0.8);
+}
+
+/* Tilbage til oversigten */
+.overviewLink {
+  padding: 70px max(24px, calc((100vw - var(--max)) / 2));
+  display: flex;
+  flex-direction: column;
+  background: var(--paper-light);
+  text-decoration: none;
+}
+
+.overviewLink span {
+  color: var(--accent);
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.overviewLink strong {
+  margin-top: 14px;
+  color: var(--strong);
+  font-family: var(--serif);
+  font-size: clamp(2.5rem, 5vw, 4.8rem);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+@media (max-width: 900px) {
+  .caseSplit {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    row-gap: 22px;
+    padding: 38px 0;
+  }
+
+  .caseSplit .storyHeading,
+  .caseSplit .storyText,
+  .caseSplit .caseMediaRow {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .caseSplit .storyText {
+    max-width: 680px;
+  }
+
+  .caseSplit .caseMediaRow {
+    margin-top: 6px;
+  }
+
+  .caseTextAbove .storyText {
+    columns: 1;
+  }
+}
+
+@media (max-width: 760px) {
+  .back {
+    width: calc(100% - 32px);
+    padding: 32px 0 20px;
+  }
+
+  .hero {
+    width: calc(100% - 32px);
+    padding: 32px 0;
+  }
+
+  .hero h1 {
+    margin: 32px 0 25px;
+  }
+
+  .cover {
+    width: calc(100% - 32px);
+  }
+
+  .coverOverlay,
+  .coverGraphic {
+    padding: 24px;
+  }
+
+  .overview,
+  .storySection,
+  .reflection {
+    grid-template-columns: 1fr;
+  }
+
+  .overview {
+    width: calc(100% - 32px);
+    gap: 32px;
+  }
+
+  .about {
+    grid-column: auto;
+  }
+
+  .story {
+    width: calc(100% - 32px);
+  }
+
+  .storySection {
+    padding: 38px 0;
+    gap: 25px;
+  }
+
+  .storySection.dark {
+    padding: 38px 20px;
+  }
+
+  .reflection {
+    padding: 60px 16px;
+  }
+
+  .overviewLink {
+    padding: 58px 16px;
+  }
+}

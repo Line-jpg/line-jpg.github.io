@@ -109,11 +109,11 @@ function HomePage() {
               <div className="project-row-body">
                 <h3>{project.title}</h3>
                 <p>{project.description}</p>
-                <p className="project-row-tags">{project.tags.join(" - ")}</p>
+                <p className="project-row-tags">{project.category}</p>
               </div>
               <img
                 className="project-row-image"
-                src={project.image}
+                src={project.cover}
                 alt={`Preview af ${project.title}`}
               />
             </Link>

@@ -22,7 +22,11 @@ function Navbar() {
         onClick={() => goToSection("top")}
         aria-label="Til toppen"
       >
-        <img className="brand" src="iconWhite.png" alt="Line Svendsen" />
+        <img
+          className="brand"
+          src={`${import.meta.env.BASE_URL}iconWhite.png`}
+          alt="Line Svendsen"
+        />
       </button>
 
       <nav className="site-nav" aria-label="Primær navigation">
