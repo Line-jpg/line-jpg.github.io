@@ -9,32 +9,6 @@ const picture = (title = "", caption = "", file = "") => ({
   src: asset(file),
 });
 
-/*
-  SKABELON
-  Tomme felter ("" eller [""]) vises ikke på projektsiden. De står klar til,
-  at du udfylder dem.
-
-  slug           bruges i URL'en: /projects/<slug>
-  title          overskrift
-  year           årstal
-  category       kort linje, fx "UX/UI · React" (vises også på forsiden)
-  intro          kort tekst under overskriften
-  description    "Om projektet" (vises også på forsiden)
-  services       Discipliner
-  collaboration  Projektform, fx "Gruppeprojekt · 3. semester"
-  tools          Værktøjer
-  cover          stort billede øverst (vises også på forsiden)
-  coverAlt       alt-tekst til cover
-  links          [{ label, url }]
-  story          sektioner: { heading, paragraphs: [""], layout, theme, media }
-                 layout: "" eller "text-above" (teksten over billederne)
-                 theme: "" eller "dark" (mørk boks med lys tekst)
-                 media.layout: "single" | "comparison" (2 billeder side om
-                 side) | "carousel"
-                 media.items: [picture("Titel", "Billedtekst", "fil.png")]
-  reflection     [""] – afsnit i refleksionen
-*/
-
 const projects = [
   {
     slug: "Vuuh",
@@ -43,7 +17,7 @@ const projects = [
     category: "UX/UI · Brugertest · Figma",
     description:
       "Case 2 var et gruppeprojekt, med fokus på onboarding oplevelsen hos firmaet Vuuh.",
-    services: "UX/UI · Brugertest · Figma",
+    services: "Nielsen’s 10 Usability Heuristics · Cognitive Walkthrough",
     collaboration: "Gruppeprojekt · 3. semester",
     tools: "Brugertest · Figma · UX/UI",
     cover: asset("vuuhCover.png"),
@@ -76,7 +50,7 @@ const projects = [
         heading: "Undersøgelse og prioritering",
         paragraphs: [
           "Undersøgelsen af den nuværende onboarding viste, at brugerflowet indeholder for mange steps og mangler tydelig vejledning. Flere steps fremstår som afslutningen på processen, selvom der stadig er handlinger, der skal gennemføres. Det skaber usikkerhed om næste handling og kan få brugeren til at gå i stå eller opgive onboarding undervejs.",
-          "På baggrund af dette prioriterede jeg at forenkle flowet, forebygge fejl og tydeliggøre brugerens næste handling. Fokus var at reducere unødvendige steps og klik samt sikre tydelig feedback, så brugeren altid ved, hvor vedkommende befinder sig i processen, og hvad der mangler. Målet var at skabe en mere intuitiv onboarding, der gør det nemmere at gennemføre processen uden hjælp.",
+          "På baggrund af dette prioriterede vi, at forenkle flowet, forebygge fejl og tydeliggøre brugerens næste handling. Fokus var at reducere unødvendige steps og klik samt sikre tydelig feedback, så brugeren altid ved, hvor vedkommende befinder sig i processen, og hvad der mangler. Målet var at skabe en mere intuitiv onboarding, der gør det nemmere at gennemføre processen uden hjælp.",
           "Det faglige grundlag var Jakob Nielsens heuristikker 5. Error Prevention og 7. Flexibility and Efficiency of Use. Den første handler om at forebygge fejl og usikkerhed, mens den anden fokuserer på at gøre interaktioner mere effektive og reducere unødvendige handlinger. Heuristikkerne understøttede derfor prioriteringen af et enklere og mere overskueligt brugerflow, der mindsker risikoen for frafald og tab af potentielle kunder.",
         ],
         layout: "",
@@ -171,7 +145,7 @@ const projects = [
         ],
         media: {
           layout: "single",
-          items: [picture("")],
+          items: [picture()],
         },
       },
       {
@@ -291,7 +265,7 @@ const projects = [
       {
         heading: "Case og udfordring",
         paragraphs: [
-          "Casen handlede om at videreudvikle LA RŌUGEs eksisterende secondhand-koncept og undersøge, hvordan det kunne få en tydeligere identitet og stå stærkere som selvstændigt brand. Udfordringen var, at konceptet manglede et særskilt visuelt udtryk og en klar kommunikation, hvilket begrænsede dets potentiale. Mit bidrag bestod i konceptudvikling og design med fokus på at skabe en tydeligere visuel retning og styrke konceptets identitet.",
+          "Casen handlede om at videreudvikle LA RŌUGEs eksisterende secondhand-koncept og undersøge, hvordan det kunne få sin egen identitet og stå stærkere som et selvstændigt brand. Konceptet er i dag en del af hovedbrandets hjemmeside og mangler et særskilt visuelt udtryk og en klar kommunikation, hvilket begrænser muligheden for at nå nye målgrupper - særligt yngre forbrugere med interesse for secondhand. Mit bidrag bestod i konceptudvikling og design med fokus på at skabe en tydelig visuel retning og et selvstændigt univers, der kan styrke konceptets identitet og gøre det mere relevant for målgruppen.",
         ],
         layout: "",
         media: { layout: "single", items: [picture()] },
@@ -301,8 +275,8 @@ const projects = [
           "Hvilke indsigter gav vores undersøgelser, og hvordan prioriterede vi?",
         layout: "text-above",
         paragraphs: [
-          "Ud fra vores desk research fandt vi følgende indsigter: SE BILAG",
-          "",
+          "Ud fra vores desk research kom vi frem til vores 3 hovedindsigter.",
+          "Dem prioriterede vi, da de var de mest relevante for vores konceptudvikling og design.",
         ],
         layout: "text-above",
         media: {
@@ -361,7 +335,7 @@ const projects = [
         layout: "text-above",
         paragraphs: [
           "Som en stor del af vores subbrand, udviklede vi nogle gimmicks, som kunne bruges til at skabe opmærksomhed omkring subbrandet og dets produkter. Den ene gimmick tager fat i rødstrømpe bevægelsen, hvor man får et par røde strømper med ved første køb - noget som kan være med til at skabbe et fælleskab, hvis man er en del af det.",
-          "",
+          "Den anden gimmick er en takke note, som man får med ved første køb. Den er med til at gøre det mere personligt for kunden, og muliggør at La RŌUGE kan skabe en stærkere forbindelse med kunderne ved at tilføje en personlig touch til købeprocessen.",
         ],
         media: {
           layout: "comparison",
@@ -374,13 +348,14 @@ const projects = [
       {
         heading: "Faglig refleksion",
         paragraphs: [
-          "Hvilke valg og fravalg traf du, hvad lærte du, og hvad kunne være næste skridt?",
+          "Vi stod ofte overfor udfordringer, hvor vi skulle finde en balance mellem at skabe et selvstændigt subbrand og samtidig bevare en visuel forbindelse til moderselskabet. Det krævede en del iterationer og feedback for at finde den rette balance.",
+          "Vi lærte vigtigheden af at have en klar konceptuel retning og at være åbne for feedback og iterationer i designprocessen. Det har været en værdifuld erfaring, der har styrket vores evne til at udvikle et subbrand, der både er unikt og relevant for målgruppen.",
         ],
       },
       {
         heading: "Forretningspotentiale",
         paragraphs: [
-          "Hvordan skaber løsningen værdi for brugeren, virksomheden eller samfundet?",
+          "Et selvstændigt secondhand-subbrand kan hjælpe LA RŌUGE med at nå en yngre målgruppe, tiltrække nye kunder og skabe øget aktivitet omkring virksomhedens eksisterende re-commerce-koncept. En tydelig identitet og en mere overskuelig brugerrejse kan gøre det lettere at købe og videresælge tøj, hvilket potentielt kan øge omsætningen, styrke kundeloyaliteten og skabe mere værdi af virksomhedens eksisterende produkter.",
         ],
         layout: "",
         media: { layout: "single", items: [picture()] },
