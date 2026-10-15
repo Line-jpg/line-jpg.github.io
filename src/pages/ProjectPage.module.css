@@ -300,6 +300,29 @@
   margin-top: 12px;
 }
 
+/* theme: "dark" – mørk boks med lys tekst, samme farver som refleksionen.
+   --muted og --line overskrives, så tekst og billedtekster i CaseMedia også
+   bliver lyse. */
+.storySection.dark {
+  --muted: rgba(247, 244, 239, 0.8);
+  --line: rgba(247, 244, 239, 0.25);
+  margin: 24px 0;
+  padding: 56px clamp(24px, 5vw, 56px);
+  border-bottom: 0;
+  border-radius: 0.5rem;
+  color: var(--paper-light);
+  background: var(--strong);
+}
+
+.dark .storyHeading span {
+  color: rgba(247, 244, 239, 0.6);
+}
+
+.dark .links a {
+  border-color: rgba(247, 244, 239, 0.6);
+  color: var(--paper-light);
+}
+
 /* Refleksion */
 .reflection {
   padding: 75px max(24px, calc((100vw - var(--max)) / 2));
@@ -414,6 +437,10 @@
   .storySection {
     padding: 38px 0;
     gap: 25px;
+  }
+
+  .storySection.dark {
+    padding: 38px 20px;
   }
 
   .reflection {

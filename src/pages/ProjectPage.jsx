@@ -160,7 +160,7 @@ function ProjectPage() {
                   : section.images.length > 0
                     ? styles.caseSplit
                     : ""
-              }`}
+              } ${section.theme === "dark" ? styles.dark : ""}`}
               key={sectionIndex}
             >
               <div className={styles.storyHeading}>

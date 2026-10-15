@@ -26,8 +26,9 @@ const picture = (title = "", caption = "", file = "") => ({
   cover          stort billede øverst (vises også på forsiden)
   coverAlt       alt-tekst til cover
   links          [{ label, url }]
-  story          sektioner: { heading, paragraphs: [""], layout, media }
+  story          sektioner: { heading, paragraphs: [""], layout, theme, media }
                  layout: "" eller "text-above" (teksten over billederne)
+                 theme: "" eller "dark" (mørk boks med lys tekst)
                  media.layout: "single" | "comparison" (2 billeder side om
                  side) | "carousel"
                  media.items: [picture("Titel", "Billedtekst", "fil.png")]
@@ -153,10 +154,8 @@ const projects = [
       {
         heading: "Få styr på koden",
         paragraphs: [
-          "Et af mine første mål, har været at få styr på de steder i koden der har været problematiske.",
-          "Det kunne være steder hvor der var for mange komponenter i en fil, eller hvor komponenter var for store og uoverskuelige. Jeg har derfor delt komponenter op i mindre dele, og flyttet dem til deres egne filer. Dette har gjort koden mere overskuelig og lettere at arbejde med fremover.",
-          "Den store ændring har været at flytte alle komponenter til deres egne filer, og importere dem i App.jsx. Dette har gjort det lettere at finde rundt i koden, og gjort det mere overskueligt at arbejde med.",
-          "Se bilag",
+          "Koden er blevet opdelt i komponenter, og flyttet dem til deres egne filer. Dette har gjort koden mere overskuelig og lettere at arbejde med fremover.",
+          "Og så importeret i App.jsx. Dette har gjort det lettere at finde rundt i koden, og gjort det mere overskueligt at arbejde med.",
         ],
         layout: "",
         media: {
@@ -170,7 +169,6 @@ const projects = [
           "Efter at have fået overblik i koden, kunne jeg finde ud af hvad jeg vil have fokus på.",
           "Jeg gjorde det mit læremål, at arbejde med loading states, errorhandling og accesibilitet. Dette har jeg prioriteret, da det er områder jeg ikke har arbejdet med før.",
         ],
-        layout: "",
         media: {
           layout: "single",
           items: [picture("")],
@@ -178,48 +176,94 @@ const projects = [
       },
       {
         heading: "Loading states",
+        theme: "dark",
         paragraphs: [
           "Målet her, har været at tilføje loading states for at give brugerne feedback under indlæsning.",
+          "Jeg har implementeret UI loading states, så brugeren får tydelig feedback, mens systemet behandler en handling. Det skaber en mere intuitiv brugeroplevelse, reducerer risikoen for gentagne klik og gør ventetiden mere overskuelig. Samtidig bidrager det til en mere responsiv og gennemarbejdet løsning.",
+          "",
         ],
-        layout: "",
+        layout: "text-above",
         media: {
-          layout: "single",
-          items: [picture("Loading states", "", "skeletonMellemrum.png")],
+          layout: "comparison",
+          items: [
+            picture(
+              "Ingen loading state",
+              "Sådan så det ud, før der blev tilføjet et skeleton som loading state.",
+              "beforeMellemrum.png",
+            ),
+            picture(
+              "Med loading state",
+              "Sådan ser det ud efter, at der er tilføjet et skeleton som loading state.",
+              "skeletonMellemrum.png",
+            ),
+          ],
         },
       },
       {
-        heading: "Errorhandling",
+        heading: "Errorhandling og feedback",
         paragraphs: [
-          "Der er implementeret en robust errorhandling, der sikrer, at brugere får en god oplevelse, selv når der opstår fejl.",
+          "Der er implementeret errorhandling, der sikrer, at brugere får en god oplevelse, selv når der opstår fejl.",
+          "Jeg har også implementeret feedbackmekanismer, som bekræfter, at brugeren er tilmeldt det event, formularen tilhører.",
         ],
         layout: "",
         media: {
-          layout: "single",
-          items: [picture("Errorhandling", "", "errorHandling.png")],
+          layout: "carousel",
+          items: [
+            picture("Errorhandling", "", "errorHandling.png"),
+            picture("Errorhandling", "", "udfyldMellemrum.png"),
+            picture("Errorhandling", "", "tilmeldingMellemrum.png"),
+          ],
         },
       },
       {
-        heading: "Supabase integration",
+        heading: "Justeringer af supabase",
         paragraphs: [
-          "Optimeret Supabase for at kunne holde styr på data, og sikre en robust og skalérbar database.",
+          "Jeg oprettede separate databasetabeller til events og venues og forbandt dem via fremmednøgler. Det skaber en mere struktureret datamodel, der gør det lettere at vedligeholde data og tilknytte venues til events fremadrettet.",
         ],
         layout: "",
         media: {
           layout: "single",
-          items: [picture("Supabase integration")],
+          items: [picture("Supabase integration", "", "supaBase.png")],
         },
       },
       {
-        heading: "",
-        paragraphs: [""],
+        heading: "Hvordan skaber løsningen værdi?",
+        paragraphs: [
+          "Implementeringen af skeleton loading states og error handling skaber værdi for både brugerne og den videre udvikling af platformen. Skeleton loading gør ventetiden mere overskuelig, mens tydelig fejlhåndtering hjælper brugeren med at forstå og håndtere problemer. Det kan reducere frustration, forebygge gentagne handlinger og skabe en mere stabil og brugervenlig oplevelse. Samtidig gør løsningen det lettere at identificere fejl og videreudvikle platformen.",
+        ],
         layout: "",
         media: { layout: "single", items: [picture()] },
       },
+      {
+        heading: "Verificering af forbedringer",
+        paragraphs: [
+          "For at verificere forbedringerne, har jeg brugt lighthouse til at analysere ydeevnen og brugeroplevelsen af løsningen.",
+        ],
+        layout: "",
+        media: {
+          layout: "single",
+          items: [
+            picture(
+              "Lighthouse",
+              "Dette resultat er med no throttling - har prøvet med 3G og 4G og viste ikke samme resultat. Det reflekteres over i næste sektion.",
+              "mellemrumLighthouse.png",
+            ),
+          ],
+        },
+      },
+      {
+        heading: "Next step",
+        theme: "dark",
+        paragraphs: [
+          "Skulle jeg arbejde videre med Mellemrum, ville jeg fokusere på at optimere performance og tilføje flere funktioner, der forbedrer brugeroplevelsen yderligere. Det kunne feks. være at implementere flere CRUD funktioner - såsom slette og/eller redigere events. Slette deres tilmelding og eventuelt et login system.",
+          "Jeg vil også arbejde med at optimere performance, så platformen bliver hurtigere og mere responsiv. Dette kan gøres ved at optimere billeder, reducere unødvendige scripts og implementere cachingstrategier.",
+          "Så hjemmesiden bliver mere stabil og hurtigere at bruge.",
+        ],
+      },
     ],
-    reflection: [""],
   },
   {
-    slug: "d´occasion",
+    slug: "d'occasion",
     title: "La Rouge Subbrand",
     year: "2026",
     category: "Koncept udvikling · UX/UI · Designsystemer · Figma",
