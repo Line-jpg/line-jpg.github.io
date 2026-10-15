@@ -11,99 +11,6 @@ const picture = (title = "", caption = "", file = "") => ({
 
 const projects = [
   {
-    slug: "Vuuh",
-    title: "Onboarding for Vuuh",
-    year: "2026",
-    category: "UX/UI · Brugertest · Figma",
-    description:
-      "Case 2 var et gruppeprojekt, med fokus på onboarding oplevelsen hos firmaet Vuuh.",
-    services: "Nielsen’s 10 Usability Heuristics · Cognitive Walkthrough",
-    collaboration: "Gruppeprojekt · 3. semester",
-    tools: "Brugertest · Figma · UX/UI",
-    cover: asset("vuuhCover.png"),
-    coverAlt: "",
-    links: [
-      {
-        label: "Figma prototype",
-        url: "https://www.figma.com/proto/MeZ6V3TVoAOar2gzLS52rb/Case-2---Vuuh?node-id=187-1116&starting-point-node-id=187%3A1116&t=ENCYw39DZVTtNzA8-1",
-      },
-      {
-        label: "FigJam",
-        url: "https://www.figma.com/board/NZdBDp6xkuzHmOg9IzNhYy/Case-2---LAES?node-id=0-1&p=f&t=5MOYvDb8w1F8UH3v-0",
-      },
-      {
-        label: "UX Audit",
-        url: "https://drive.google.com/file/d/1r6ZC2bulI5YFLgJ1n-_2rd0doWEptNk5/view?usp=sharing",
-      },
-    ],
-    story: [
-      {
-        heading: "Om projektet",
-        paragraphs: [
-          "Vuuh's produkt er en shopify extension service.",
-          "Det hjælper webshopejere med at slippe for manuelt arbejde, og lader Vuuh automatisk dele produktinformation og billeder mellem brands og butikker ved hjælp af AI. Problemet opstår, da Vuuh er svært at sætte op uden hjælp udefra. For at kunne lave en skarp onboarding, ville vi finde ud af, hvad der gjorde processen besværlig, og hvordan den kunne gøres nemmere med de funktioner, Vuuh allerede havde.",
-        ],
-        layout: "",
-        media: { layout: "single", items: [picture()] },
-      },
-      {
-        heading: "Undersøgelse og prioritering",
-        paragraphs: [
-          "Undersøgelsen af den nuværende onboarding viste, at brugerflowet indeholder for mange steps og mangler tydelig vejledning. Flere steps fremstår som afslutningen på processen, selvom der stadig er handlinger, der skal gennemføres. Det skaber usikkerhed om næste handling og kan få brugeren til at gå i stå eller opgive onboarding undervejs.",
-          "På baggrund af dette prioriterede vi, at forenkle flowet, forebygge fejl og tydeliggøre brugerens næste handling. Fokus var at reducere unødvendige steps og klik samt sikre tydelig feedback, så brugeren altid ved, hvor vedkommende befinder sig i processen, og hvad der mangler. Målet var at skabe en mere intuitiv onboarding, der gør det nemmere at gennemføre processen uden hjælp.",
-          "Det faglige grundlag var Jakob Nielsens heuristikker 5. Error Prevention og 7. Flexibility and Efficiency of Use. Den første handler om at forebygge fejl og usikkerhed, mens den anden fokuserer på at gøre interaktioner mere effektive og reducere unødvendige handlinger. Heuristikkerne understøttede derfor prioriteringen af et enklere og mere overskueligt brugerflow, der mindsker risikoen for frafald og tab af potentielle kunder.",
-        ],
-        layout: "text-above",
-        media: {
-          layout: "text-above",
-          items: [picture("Undersøgelse af onboarding", "", "uxFindings.png")],
-        },
-      },
-      {
-        heading: "Løsning og faglige valg",
-        theme: "dark",
-        paragraphs: [
-          "For at imødekomme udfordringerne fra undersøgelsen valgte vi at implementere et guidet onboarding-flow (Wizard/Guided Steps) til testordren. Brugeren bliver trin for trin introduceret til processen, hvor hvert step forklarer den næste handling. Ved at trykke på “GOT IT!” kan brugeren fortsætte til næste trin. Samtidig nedtones informationer, som ikke er relevante for den aktuelle handling, så brugerens fokus holdes på det vigtigste.",
-          "Efter download af testordren vises en loading-side, der tydeliggør, at der er tale om en testordre, som ikke bliver vist i brugerens webshop. Når processen er gennemført, vises en pop-up med beskeden “Order is successfully downloaded!”.",
-        ],
-        links: [
-          {
-            label: "Link til gennemgang af optimiseret onboarding",
-            url: "https://www.figma.com/proto/MeZ6V3TVoAOar2gzLS52rb/Case-2---Vuuh?node-id=187-1116&starting-point-node-id=187%3A1116&t=zavENyVEb9OSFZTQ-1",
-          },
-        ],
-      },
-      {
-        heading: "Resultat og dokumentation",
-        paragraphs: [
-          "Løsningen tager direkte udgangspunkt i undersøgelsens identificerede problemer med manglende vejledning og usikkerhed om næste handling. Det guidede flow skaber en tydeligere struktur, mens nedtoning af irrelevante informationer reducerer visuel støj. Loading-indikatoren og bekræftelsesbeskeden giver brugeren feedback på processen og skaber klarhed over, hvornår handlingen er gennemført. Dermed bliver onboarding mere overskuelig og mindsker risikoen for, at brugeren går i stå undervejs.",
-        ],
-        layout: "",
-        media: { layout: "single", items: [picture()] },
-      },
-      {
-        heading: "Refleksion",
-        paragraphs: [
-          "Projektet har givet mig værdifuld erfaring med at analysere brugerflows og identificere problemområder. Mine vigtigste refleksioner er:",
-          "Brugervenlighed: Vigtigheden af at skabe en overskuelig og intuitiv onboarding-proces.",
-          "Kommunikation: Tydelig kommunikation er afgørende for at guide brugeren gennem processen.",
-          "Heuristikker: Hvordan heuristikker kan bruges til at identificere forbedringsmuligheder og kvalificere designbeslutninger.",
-        ],
-        layout: "",
-        media: { layout: "single", items: [picture()] },
-      },
-      {
-        heading: "Forretningspotentiale",
-        theme: "dark",
-        paragraphs: [
-          "Løsningen giver mulighed for, at kunderne af Vuuh selv kan gennemføre onboarding uden hjælp udefra. Det kan reducere behovet for support og frigøre ressourcer, som kan bruges på andre områder. Samtidig kan en mere brugervenlig onboarding øge konverteringsraten og fastholde kunderne, hvilket kan have en positiv effekt på Vuuh's forretning.",
-        ],
-        layout: "",
-        media: { layout: "single", items: [picture()] },
-      },
-    ],
-  },
-  {
     slug: "Mellemrum",
     title: "Optimering af website for Mellemrum",
     year: "2026",
@@ -245,6 +152,99 @@ const projects = [
           "Jeg vil også arbejde med at optimere performance, så platformen bliver hurtigere og mere responsiv. Dette kan gøres ved at optimere billeder, reducere unødvendige scripts og implementere cachingstrategier.",
           "Så hjemmesiden bliver mere stabil og hurtigere at bruge.",
         ],
+      },
+    ],
+  },
+  {
+    slug: "Vuuh",
+    title: "Onboarding for Vuuh",
+    year: "2026",
+    category: "UX/UI · Brugertest · Figma",
+    description:
+      "Case 2 var et gruppeprojekt, med fokus på onboarding oplevelsen hos firmaet Vuuh.",
+    services: "Nielsen’s 10 Usability Heuristics · Cognitive Walkthrough",
+    collaboration: "Gruppeprojekt · 3. semester",
+    tools: "Brugertest · Figma · UX/UI",
+    cover: asset("vuuhCover.png"),
+    coverAlt: "",
+    links: [
+      {
+        label: "Figma prototype",
+        url: "https://www.figma.com/proto/MeZ6V3TVoAOar2gzLS52rb/Case-2---Vuuh?node-id=187-1116&starting-point-node-id=187%3A1116&t=ENCYw39DZVTtNzA8-1",
+      },
+      {
+        label: "FigJam",
+        url: "https://www.figma.com/board/NZdBDp6xkuzHmOg9IzNhYy/Case-2---LAES?node-id=0-1&p=f&t=5MOYvDb8w1F8UH3v-0",
+      },
+      {
+        label: "UX Audit",
+        url: "https://drive.google.com/file/d/1r6ZC2bulI5YFLgJ1n-_2rd0doWEptNk5/view?usp=sharing",
+      },
+    ],
+    story: [
+      {
+        heading: "Om projektet",
+        paragraphs: [
+          "Vuuh's produkt er en shopify extension service.",
+          "Det hjælper webshopejere med at slippe for manuelt arbejde, og lader Vuuh automatisk dele produktinformation og billeder mellem brands og butikker ved hjælp af AI. Problemet opstår, da Vuuh er svært at sætte op uden hjælp udefra. For at kunne lave en skarp onboarding, ville vi finde ud af, hvad der gjorde processen besværlig, og hvordan den kunne gøres nemmere med de funktioner, Vuuh allerede havde.",
+        ],
+        layout: "",
+        media: { layout: "single", items: [picture()] },
+      },
+      {
+        heading: "Undersøgelse og prioritering",
+        paragraphs: [
+          "Undersøgelsen af den nuværende onboarding viste, at brugerflowet indeholder for mange steps og mangler tydelig vejledning. Flere steps fremstår som afslutningen på processen, selvom der stadig er handlinger, der skal gennemføres. Det skaber usikkerhed om næste handling og kan få brugeren til at gå i stå eller opgive onboarding undervejs.",
+          "På baggrund af dette prioriterede vi, at forenkle flowet, forebygge fejl og tydeliggøre brugerens næste handling. Fokus var at reducere unødvendige steps og klik samt sikre tydelig feedback, så brugeren altid ved, hvor vedkommende befinder sig i processen, og hvad der mangler. Målet var at skabe en mere intuitiv onboarding, der gør det nemmere at gennemføre processen uden hjælp.",
+          "Det faglige grundlag var Jakob Nielsens heuristikker 5. Error Prevention og 7. Flexibility and Efficiency of Use. Den første handler om at forebygge fejl og usikkerhed, mens den anden fokuserer på at gøre interaktioner mere effektive og reducere unødvendige handlinger. Heuristikkerne understøttede derfor prioriteringen af et enklere og mere overskueligt brugerflow, der mindsker risikoen for frafald og tab af potentielle kunder.",
+        ],
+        layout: "text-above",
+        media: {
+          layout: "text-above",
+          items: [picture("Undersøgelse af onboarding", "", "uxFindings.png")],
+        },
+      },
+      {
+        heading: "Løsning og faglige valg",
+        theme: "dark",
+        paragraphs: [
+          "For at imødekomme udfordringerne fra undersøgelsen valgte vi at implementere et guidet onboarding-flow (Wizard/Guided Steps) til testordren. Brugeren bliver trin for trin introduceret til processen, hvor hvert step forklarer den næste handling. Ved at trykke på “GOT IT!” kan brugeren fortsætte til næste trin. Samtidig nedtones informationer, som ikke er relevante for den aktuelle handling, så brugerens fokus holdes på det vigtigste.",
+          "Efter download af testordren vises en loading-side, der tydeliggør, at der er tale om en testordre, som ikke bliver vist i brugerens webshop. Når processen er gennemført, vises en pop-up med beskeden “Order is successfully downloaded!”.",
+        ],
+        links: [
+          {
+            label: "Link til gennemgang af optimiseret onboarding",
+            url: "https://www.figma.com/proto/MeZ6V3TVoAOar2gzLS52rb/Case-2---Vuuh?node-id=187-1116&starting-point-node-id=187%3A1116&t=zavENyVEb9OSFZTQ-1",
+          },
+        ],
+      },
+      {
+        heading: "Resultat og dokumentation",
+        paragraphs: [
+          "Løsningen tager direkte udgangspunkt i undersøgelsens identificerede problemer med manglende vejledning og usikkerhed om næste handling. Det guidede flow skaber en tydeligere struktur, mens nedtoning af irrelevante informationer reducerer visuel støj. Loading-indikatoren og bekræftelsesbeskeden giver brugeren feedback på processen og skaber klarhed over, hvornår handlingen er gennemført. Dermed bliver onboarding mere overskuelig og mindsker risikoen for, at brugeren går i stå undervejs.",
+        ],
+        layout: "",
+        media: { layout: "single", items: [picture()] },
+      },
+      {
+        heading: "Refleksion",
+        paragraphs: [
+          "Projektet har givet mig værdifuld erfaring med at analysere brugerflows og identificere problemområder. Mine vigtigste refleksioner er:",
+          "Brugervenlighed: Vigtigheden af at skabe en overskuelig og intuitiv onboarding-proces.",
+          "Kommunikation: Tydelig kommunikation er afgørende for at guide brugeren gennem processen.",
+          "Heuristikker: Hvordan heuristikker kan bruges til at identificere forbedringsmuligheder og kvalificere designbeslutninger.",
+        ],
+        layout: "",
+        media: { layout: "single", items: [picture()] },
+      },
+      {
+        heading: "Forretningspotentiale",
+        theme: "dark",
+        paragraphs: [
+          "Løsningen giver mulighed for, at kunderne af Vuuh selv kan gennemføre onboarding uden hjælp udefra. Det kan reducere behovet for support og frigøre ressourcer, som kan bruges på andre områder. Samtidig kan en mere brugervenlig onboarding øge konverteringsraten og fastholde kunderne, hvilket kan have en positiv effekt på Vuuh's forretning.",
+        ],
+        layout: "",
+        media: { layout: "single", items: [picture()] },
       },
     ],
   },
