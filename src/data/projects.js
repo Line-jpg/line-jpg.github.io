@@ -40,36 +40,71 @@ const projects = [
     title: "Onboarding for Vuuh",
     year: "2026",
     category: "UX/UI · Brugertest · Figma",
-    intro: "En onboarding-proces for kunder af Vuuh.",
     description: "KOMMER SNART.",
     services: "UX/UI · Brugertest · Figma",
     collaboration: "Gruppeprojekt · 3. semester",
     tools: "Brugertest · Figma · UX/UI",
     cover: asset("vuuhMockUp.png"),
     coverAlt: "",
-    links: [],
+    links: [
+      {
+        label: "Figma prototype",
+        url: "https://www.figma.com/proto/MeZ6V3TVoAOar2gzLS52rb/Case-2---Vuuh?node-id=187-1116&starting-point-node-id=187%3A1116&t=ENCYw39DZVTtNzA8-1",
+      },
+      {
+        label: "UX Audit",
+        url: "https://drive.google.com/file/d/1r6ZC2bulI5YFLgJ1n-_2rd0doWEptNk5/view?usp=sharing",
+      },
+    ],
     story: [
       {
-        heading: "",
-        paragraphs: [""],
+        heading: "Om projektet",
+        paragraphs: [
+          "Case 2 var et gruppeprojekt, med fokus på onboarding oplevelsen hos firmaet Vuuh. Deres produkt er en shopify extension service, der hjælper webshopejere med at slippe for manuelt arbejde, og lad Vuuh automatisk dele produktinformation og billeder mellem brands og butikker ved hjælp af AI. Problemet var, at Vuuh var svært at sætte op uden hjælp udefra. For at kunne lave en skarp onboarding, ville vi finde ud af, hvad der gjorde processen besværlig, og hvordan den kunne gøres nemmere med de funktioner, Vuuh allerede havde. ",
+        ],
         layout: "",
         media: { layout: "single", items: [picture()] },
       },
       {
-        heading: "",
-        paragraphs: [""],
+        heading: "Undersøgelse og prioritering",
+        paragraphs: [
+          "Undersøgelsen af den nuværende onboarding viste, at brugerflowet indeholder for mange steps og mangler tydelig vejledning. Flere steps fremstår som afslutningen på processen, selvom der stadig er handlinger, der skal gennemføres. Det skaber usikkerhed om næste handling og kan få brugeren til at gå i stå eller opgive onboarding undervejs.",
+          "På baggrund af dette prioriterede jeg at forenkle flowet, forebygge fejl og tydeliggøre brugerens næste handling. Fokus var at reducere unødvendige steps og klik samt sikre tydelig feedback, så brugeren altid ved, hvor vedkommende befinder sig i processen, og hvad der mangler. Målet var at skabe en mere intuitiv onboarding, der gør det nemmere at gennemføre processen uden hjælp.",
+          "Det faglige grundlag var Jakob Nielsens heuristikker 5. Error Prevention og 7. Flexibility and Efficiency of Use. Den første handler om at forebygge fejl og usikkerhed, mens den anden fokuserer på at gøre interaktioner mere effektive og reducere unødvendige handlinger. Heuristikkerne understøttede derfor prioriteringen af et enklere og mere overskueligt brugerflow, der mindsker risikoen for frafald og tab af potentielle kunder.",
+        ],
         layout: "",
         media: { layout: "single", items: [picture()] },
       },
       {
-        heading: "",
-        paragraphs: [""],
+        heading: "Løsning og faglige valg",
+        paragraphs: [
+          "For at imødekomme udfordringerne fra undersøgelsen valgte vi at implementere et guidet onboarding-flow (Wizard/Guided Steps) til testordren. Brugeren bliver trin for trin introduceret til processen, hvor hvert step forklarer den næste handling. Ved at trykke på “GOT IT!” kan brugeren fortsætte til næste trin. Samtidig nedtones informationer, som ikke er relevante for den aktuelle handling, så brugerens fokus holdes på det vigtigste.",
+          "Efter download af testordren vises en loading-side, der tydeliggør, at der er tale om en testordre, som ikke bliver vist i brugerens webshop. Når processen er gennemført, vises en pop-up med beskeden “Order is successfully downloaded!”.",
+        ],
         layout: "",
         media: { layout: "single", items: [picture()] },
       },
       {
-        heading: "",
-        paragraphs: [""],
+        heading: "Resultat og dokumentation",
+        paragraphs: [
+          "Løsningen tager direkte udgangspunkt i undersøgelsens identificerede problemer med manglende vejledning og usikkerhed om næste handling. Det guidede flow skaber en tydeligere struktur, mens nedtoning af irrelevante informationer reducerer visuel støj. Loading-indikatoren og bekræftelsesbeskeden giver brugeren feedback på processen og skaber klarhed over, hvornår handlingen er gennemført. Dermed bliver onboarding mere overskuelig og mindsker risikoen for, at brugeren går i stå undervejs.",
+        ],
+        layout: "",
+        media: { layout: "single", items: [picture()] },
+      },
+      {
+        heading: "Refleksion",
+        paragraphs: [
+          "Projektet har givet mig værdifuld erfaring med at analysere brugerflows og identificere problemområder. Jeg har lært, hvor vigtigt det er at prioritere brugervenlighed og tydelig kommunikation i onboarding-processer. Desuden har jeg fået indsigt i, hvordan heuristikker kan anvendes til at guide designbeslutninger og forbedre brugeroplevelsen.",
+        ],
+        layout: "",
+        media: { layout: "single", items: [picture()] },
+      },
+      {
+        heading: "Forretningspotentiale",
+        paragraphs: [
+          "Løsningen har et stort forretningspotentiale, da den forbedrer brugeroplevelsen og øger effektiviteten i onboarding-processen. Dette kan føre til øget kundetilfredshed og forbedret brugervenlighed.",
+        ],
         layout: "",
         media: { layout: "single", items: [picture()] },
       },
