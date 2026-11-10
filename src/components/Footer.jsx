@@ -16,8 +16,11 @@ function Footer() {
         <div className="footer-details">
           <div className="footer-item">
             <p className="footer-label">Mail</p>
-            <a className="footer-value" href="mailto:lines1310@gmail.com">
-              lines1310@gmail.com
+            <a
+              className="footer-value"
+              href="mailto:eaa25lisv@students.eaaa.dk"
+            >
+              eaa25lisv@students.eaaa.dk
             </a>
           </div>
 
